@@ -1,0 +1,86 @@
+﻿[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "url": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "id": 20,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "topic": "Stack",
+    "url": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "id": 121,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "topic": "Arrays",
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "id": 217,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "topic": "Hash Table",
+    "url": "https://leetcode.com/problems/contains-duplicate/"
+  },
+  {
+    "id": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "topic": "Sliding Window",
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+  },
+  {
+    "id": 49,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "topic": "Hash Table",
+    "url": "https://leetcode.com/problems/group-anagrams/"
+  },
+  {
+    "id": 102,
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "Medium",
+    "topic": "Trees",
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+  },
+  {
+    "id": 200,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "topic": "Graphs",
+    "url": "https://leetcode.com/problems/number-of-islands/"
+  },
+  {
+    "id": 23,
+    "title": "Merge k Sorted Lists",
+    "difficulty": "Hard",
+    "topic": "Linked Lists",
+    "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+  },
+  {
+    "id": 42,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "topic": "Two Pointers",
+    "url": "https://leetcode.com/problems/trapping-rain-water/"
+  },
+  {
+    "id": 76,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "topic": "Sliding Window",
+    "url": "https://leetcode.com/problems/minimum-window-substring/"
+  },
+  {
+    "id": 124,
+    "title": "Binary Tree Maximum Path Sum",
+    "difficulty": "Hard",
+    "topic": "Trees",
+    "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+  }
+]
