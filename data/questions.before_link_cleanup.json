@@ -14,8 +14,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 1,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-106",
@@ -32,8 +31,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 2,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-107",
@@ -50,8 +48,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 3,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-108",
@@ -60,16 +57,15 @@
     "title": "Morris - Inorder Traversal",
     "topic": "Binary Trees - I",
     "difficulty": "Easy",
-    "url": "https://takeuforward.org/data-structure/morris-inorder-traversal-of-a-binary-tree/",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    "leetcode_slug": "binary-tree-inorder-traversal",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 4,
     "paid_only": false,
-    "link_match_score": 0.755,
-    "link_source": "verified_override"
+    "link_match_score": 0.755
   },
   {
     "id": "sde-109",
@@ -78,16 +74,15 @@
     "title": "Morris - Preorder Traversal",
     "topic": "Binary Trees - I",
     "difficulty": "Easy",
-    "url": "https://takeuforward.org/data-structure/morris-preorder-traversal-of-a-binary-tree/",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/n-ary-tree-preorder-traversal/",
+    "leetcode_slug": "n-ary-tree-preorder-traversal",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 5,
     "paid_only": false,
-    "link_match_score": 0.778,
-    "link_source": "verified_override"
+    "link_match_score": 0.778
   },
   {
     "id": "sde-110",
@@ -96,16 +91,15 @@
     "title": "Left view of Binary Tree",
     "topic": "Binary Trees - I",
     "difficulty": "Easy",
-    "url": "https://www.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "leetcode_slug": "diameter-of-binary-tree",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 6,
     "paid_only": false,
-    "link_match_score": 0.766,
-    "link_source": "verified_override"
+    "link_match_score": 0.766
   },
   {
     "id": "sde-111",
@@ -114,16 +108,15 @@
     "title": "Right view of Binary Tree",
     "topic": "Binary Trees - I",
     "difficulty": "Medium",
-    "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
-    "leetcode_slug": "binary-tree-right-side-view",
+    "url": "https://leetcode.com/problems/find-leaves-of-binary-tree/",
+    "leetcode_slug": "find-leaves-of-binary-tree",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 7,
     "paid_only": true,
-    "link_match_score": 0.745,
-    "link_source": "verified_override"
+    "link_match_score": 0.745
   },
   {
     "id": "sde-112",
@@ -132,16 +125,15 @@
     "title": "Top view of Binary Tree",
     "topic": "Binary Trees - I",
     "difficulty": "Easy",
-    "url": "https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "leetcode_slug": "diameter-of-binary-tree",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 8,
     "paid_only": false,
-    "link_match_score": 0.739,
-    "link_source": "verified_override"
+    "link_match_score": 0.739
   },
   {
     "id": "sde-113",
@@ -150,15 +142,14 @@
     "title": "Bottom view of Binary Tree",
     "topic": "Binary Trees - I",
     "difficulty": "Unknown",
-    "url": "https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
+    "url": "https://www.google.com/search?q=%22Bottom+view+of+Binary+Tree%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 9,
-    "link_match_score": 0.694,
-    "link_source": "verified_override"
+    "link_match_score": 0.694
   },
   {
     "id": "sde-114",
@@ -175,8 +166,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 10,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-115",
@@ -193,8 +183,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 11,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-116",
@@ -203,15 +192,14 @@
     "title": "Preorder inorder postorder in a single traversal",
     "topic": "Binary Trees - I",
     "difficulty": "Unknown",
-    "url": "https://takeuforward.org/data-structure/preorder-inorder-postorder-traversals-in-one-traversal/",
+    "url": "https://www.google.com/search?q=%22Preorder+inorder+postorder+in+a+single+traversal%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 12,
-    "link_match_score": 0.59,
-    "link_source": "verified_override"
+    "link_match_score": 0.59
   },
   {
     "id": "sde-117",
@@ -220,15 +208,14 @@
     "title": "Print root to node path",
     "topic": "Binary Trees - I",
     "difficulty": "Unknown",
-    "url": "https://takeuforward.org/data-structure/print-root-to-node-path-in-a-binary-tree/",
+    "url": "https://www.google.com/search?q=%22Print+root+to+node+path%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 13,
-    "link_match_score": 0.571,
-    "link_source": "verified_override"
+    "link_match_score": 0.571
   },
   {
     "id": "sde-118",
@@ -245,8 +232,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 14,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-119",
@@ -263,8 +249,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 15,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-120",
@@ -281,8 +266,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 16,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-121",
@@ -299,8 +283,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 17,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-122",
@@ -317,8 +300,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 18,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-123",
@@ -335,8 +317,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 19,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-124",
@@ -353,8 +334,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 20,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-125",
@@ -363,16 +343,15 @@
     "title": "Boundary Traversal of Binary Tree",
     "topic": "Binary Trees - II",
     "difficulty": "Medium",
-    "url": "https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/boundary-of-binary-tree/",
+    "leetcode_slug": "boundary-of-binary-tree",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 21,
     "paid_only": true,
-    "link_match_score": 0.821,
-    "link_source": "verified_override"
+    "link_match_score": 0.821
   },
   {
     "id": "sde-126",
@@ -389,8 +368,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 22,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-127",
@@ -407,8 +385,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 23,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-128",
@@ -425,8 +402,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 24,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-129",
@@ -443,8 +419,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 25,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-130",
@@ -461,8 +436,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 26,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-131",
@@ -471,15 +445,14 @@
     "title": "Children Sum Property in Binary Tree",
     "topic": "Binary Trees - III",
     "difficulty": "Unknown",
-    "url": "https://takeuforward.org/data-structure/check-for-children-sum-property-in-a-binary-tree/",
+    "url": "https://www.google.com/search?q=%22Children+Sum+Property+in+Binary+Tree%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 27,
-    "link_match_score": 0.676,
-    "link_source": "verified_override"
+    "link_match_score": 0.676
   },
   {
     "id": "sde-132",
@@ -488,15 +461,14 @@
     "title": "Mirror Tree",
     "topic": "Binary Trees - III",
     "difficulty": "Unknown",
-    "url": "https://www.geeksforgeeks.org/problems/mirror-tree/1",
+    "url": "https://www.google.com/search?q=%22Mirror+Tree%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 28,
-    "link_match_score": 0.714,
-    "link_source": "verified_override"
+    "link_match_score": 0.714
   },
   {
     "id": "sde-139",
@@ -513,8 +485,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 29,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-140",
@@ -531,8 +502,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 30,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-141",
@@ -549,8 +519,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 31,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-142",
@@ -567,8 +536,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 32,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-143",
@@ -585,8 +553,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 33,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-144",
@@ -603,8 +570,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 34,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-145",
@@ -613,16 +579,15 @@
     "title": "Inorder successor and predecessor in BST",
     "topic": "Binary Search Trees - I",
     "difficulty": "Medium",
-    "url": "https://www.geeksforgeeks.org/problems/predecessor-and-successor/1",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/inorder-successor-in-bst/",
+    "leetcode_slug": "inorder-successor-in-bst",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 35,
     "paid_only": true,
-    "link_match_score": 0.75,
-    "link_source": "verified_override"
+    "link_match_score": 0.75
   },
   {
     "id": "sde-146",
@@ -639,8 +604,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 36,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-147",
@@ -649,15 +613,14 @@
     "title": "Floor and Ceil in a BST",
     "topic": "Binary Search Trees - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Floor+and+Ceil+in+a+BST%22+Striver+TakeUForward",
+    "url": "https://www.google.com/search?q=%22Floor+and+Ceil+in+a+BST%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 37,
-    "link_match_score": 0.605,
-    "link_source": "verified_override"
+    "link_match_score": 0.605
   },
   {
     "id": "sde-148",
@@ -674,8 +637,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 38,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-149",
@@ -692,8 +654,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 39,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-150",
@@ -702,16 +663,15 @@
     "title": "Find K-th largest & smallest element in BST",
     "topic": "Binary Search Trees - II",
     "difficulty": "Medium",
-    "url": "https://www.google.com/search?q=%22Find+K-th+largest+and+smallest+element+in+BST%22+Striver+TakeUForward",
-    "leetcode_slug": null,
+    "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "leetcode_slug": "kth-smallest-element-in-a-bst",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 40,
     "paid_only": false,
-    "link_match_score": 0.73,
-    "link_source": "verified_override"
+    "link_match_score": 0.73
   },
   {
     "id": "sde-151",
@@ -728,8 +688,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 41,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-152",
@@ -746,8 +705,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 42,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-133",
@@ -764,8 +722,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 43,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-134",
@@ -782,8 +739,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 44,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-135",
@@ -800,8 +756,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 45,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-136",
@@ -818,8 +773,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 46,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "verified_override"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-137",
@@ -836,8 +790,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 47,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-138",
@@ -846,15 +799,14 @@
     "title": "Distinct Numbers in Window",
     "topic": "Binary Trees (Miscellaneous)",
     "difficulty": "Unknown",
-    "url": "https://www.interviewbit.com/problems/distinct-numbers-in-window/",
+    "url": "https://www.google.com/search?q=%22Distinct+Numbers+in+Window%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 48,
-    "link_match_score": 0.702,
-    "link_source": "verified_override"
+    "link_match_score": 0.702
   },
   {
     "id": "sde-001",
@@ -871,8 +823,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 49,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-002",
@@ -889,8 +840,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 50,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-003",
@@ -907,8 +857,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 51,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-004",
@@ -925,8 +874,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 52,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-005",
@@ -943,8 +891,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 53,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-006",
@@ -961,8 +908,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 54,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-007",
@@ -979,8 +925,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 55,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-008",
@@ -988,17 +933,16 @@
     "curriculum_rank": 8,
     "title": "Rotate Matrix",
     "topic": "Arrays - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Rotate+Matrix%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/rotate-string/",
+    "leetcode_slug": "rotate-string",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 56,
     "paid_only": false,
-    "link_match_score": 0.769,
-    "link_source": "safe_search"
+    "link_match_score": 0.769
   },
   {
     "id": "sde-009",
@@ -1015,8 +959,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 57,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-010",
@@ -1033,8 +976,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 58,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-011",
@@ -1051,8 +993,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 59,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-012",
@@ -1060,17 +1001,16 @@
     "curriculum_rank": 8,
     "title": "Repeat and Missing Number Array",
     "topic": "Arrays - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Repeat+and+Missing+Number+Array%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/missing-number/",
+    "leetcode_slug": "missing-number",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 60,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-013",
@@ -1078,17 +1018,16 @@
     "curriculum_rank": 8,
     "title": "Inversion of Array",
     "topic": "Arrays - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Inversion+of+Array%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+    "leetcode_slug": "intersection-of-two-arrays",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 61,
     "paid_only": false,
-    "link_match_score": 0.773,
-    "link_source": "safe_search"
+    "link_match_score": 0.773
   },
   {
     "id": "sde-014",
@@ -1105,8 +1044,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 62,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-015",
@@ -1123,8 +1061,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 63,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-016",
@@ -1132,17 +1069,16 @@
     "curriculum_rank": 9,
     "title": "Grid Unique Paths",
     "topic": "Arrays - III",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Grid+Unique+Paths%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/unique-paths/",
+    "leetcode_slug": "unique-paths",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 64,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-017",
@@ -1159,8 +1095,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 65,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-018",
@@ -1177,8 +1112,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 66,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-019",
@@ -1195,8 +1129,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 67,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-020",
@@ -1213,8 +1146,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 68,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-021",
@@ -1231,8 +1163,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 69,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-022",
@@ -1249,8 +1180,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 70,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-023",
@@ -1267,8 +1197,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 71,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-024",
@@ -1276,17 +1205,16 @@
     "curriculum_rank": 10,
     "title": "Largest Subarray with K sum",
     "topic": "Arrays - IV",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Largest+Subarray+with+K+sum%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/largest-subarray-length-k/",
+    "leetcode_slug": "largest-subarray-length-k",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 72,
     "paid_only": true,
-    "link_match_score": 0.808,
-    "link_source": "safe_search"
+    "link_match_score": 0.808
   },
   {
     "id": "sde-025",
@@ -1295,15 +1223,14 @@
     "title": "Subarray with given XOR",
     "topic": "Arrays - IV",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Subarray+with+given+XOR%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Subarray+with+given+XOR%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 73,
-    "link_match_score": 0.667,
-    "link_source": "safe_search"
+    "link_match_score": 0.667
   },
   {
     "id": "sde-093",
@@ -1312,15 +1239,14 @@
     "title": "Roman Number to Integer and vice versa",
     "topic": "Strings - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Roman+Number+to+Integer+and+vice+versa%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Roman+Number+to+Integer+and+vice+versa%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 74,
-    "link_match_score": 0.629,
-    "link_source": "safe_search"
+    "link_match_score": 0.629
   },
   {
     "id": "sde-094",
@@ -1337,8 +1263,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 75,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-095",
@@ -1355,8 +1280,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 76,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-096",
@@ -1364,17 +1288,16 @@
     "curriculum_rank": 11,
     "title": "String to Integer",
     "topic": "Strings - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22String+to+Integer%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/string-to-integer-atoi/",
+    "leetcode_slug": "string-to-integer-atoi",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 77,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-097",
@@ -1391,8 +1314,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 78,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-098",
@@ -1409,8 +1331,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 79,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-099",
@@ -1427,8 +1348,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 80,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-100",
@@ -1445,8 +1365,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 81,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-101",
@@ -1463,8 +1382,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 82,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-102",
@@ -1481,8 +1399,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 83,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-103",
@@ -1490,17 +1407,16 @@
     "curriculum_rank": 12,
     "title": "Minimum Characters required to make a String Palindromic",
     "topic": "Strings - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Minimum+Characters+required+to+make+a+String+Palindromic%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/",
+    "leetcode_slug": "minimum-insertion-steps-to-make-a-string-palindrome",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 84,
     "paid_only": false,
-    "link_match_score": 0.729,
-    "link_source": "safe_search"
+    "link_match_score": 0.729
   },
   {
     "id": "sde-104",
@@ -1509,15 +1425,14 @@
     "title": "KMP Algorithm or LPS array",
     "topic": "Strings - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22KMP+Algorithm+or+LPS+array%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22KMP+Algorithm+or+LPS+array%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 85,
-    "link_match_score": 0.577,
-    "link_source": "safe_search"
+    "link_match_score": 0.577
   },
   {
     "id": "sde-026",
@@ -1534,8 +1449,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 86,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-027",
@@ -1552,8 +1466,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 87,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-028",
@@ -1570,8 +1483,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 88,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-029",
@@ -1588,8 +1500,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 89,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-030",
@@ -1606,8 +1517,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 90,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-031",
@@ -1624,8 +1534,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 91,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-032",
@@ -1642,8 +1551,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 92,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-033",
@@ -1660,8 +1568,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 93,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-034",
@@ -1678,8 +1585,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 94,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-035",
@@ -1696,8 +1602,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 95,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-036",
@@ -1714,8 +1619,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 96,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-037",
@@ -1723,17 +1627,16 @@
     "curriculum_rank": 14,
     "title": "Flattening of a LinkedList",
     "topic": "Linked List - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Flattening+of+a+LinkedList%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+    "leetcode_slug": "flatten-binary-tree-to-linked-list",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 97,
     "paid_only": false,
-    "link_match_score": 0.733,
-    "link_source": "safe_search"
+    "link_match_score": 0.733
   },
   {
     "id": "sde-038",
@@ -1741,17 +1644,16 @@
     "curriculum_rank": 15,
     "title": "Remove Duplicate from Sorted Array",
     "topic": "Linked List & Arrays",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Remove+Duplicate+from+Sorted+Array%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+    "leetcode_slug": "remove-duplicates-from-sorted-array",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 98,
     "paid_only": false,
-    "link_match_score": 0.986,
-    "link_source": "safe_search"
+    "link_match_score": 0.986
   },
   {
     "id": "sde-039",
@@ -1768,8 +1670,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 99,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-040",
@@ -1777,17 +1678,16 @@
     "curriculum_rank": 15,
     "title": "Three Sum",
     "topic": "Linked List & Arrays",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Three+Sum%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/target-sum/",
+    "leetcode_slug": "target-sum",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 100,
     "paid_only": false,
-    "link_match_score": 0.737,
-    "link_source": "safe_search"
+    "link_match_score": 0.737
   },
   {
     "id": "sde-041",
@@ -1795,17 +1695,16 @@
     "curriculum_rank": 15,
     "title": "Rotate a LinkedList",
     "topic": "Linked List & Arrays",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Rotate+a+LinkedList%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/rotate-list/",
+    "leetcode_slug": "rotate-list",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 101,
     "paid_only": false,
-    "link_match_score": 0.733,
-    "link_source": "safe_search"
+    "link_match_score": 0.733
   },
   {
     "id": "sde-042",
@@ -1822,8 +1721,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 102,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-043",
@@ -1840,8 +1738,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 103,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-050",
@@ -1849,17 +1746,16 @@
     "curriculum_rank": 16,
     "title": "Subset Sum",
     "topic": "Recursion",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Subset+Sum%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+    "leetcode_slug": "partition-equal-subset-sum",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 104,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-051",
@@ -1876,8 +1772,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 105,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-052",
@@ -1894,8 +1789,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 106,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-053",
@@ -1912,8 +1806,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 107,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-054",
@@ -1930,8 +1823,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 108,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-055",
@@ -1948,8 +1840,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 109,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-056",
@@ -1966,8 +1857,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 110,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-057",
@@ -1984,8 +1874,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 111,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-058",
@@ -1994,15 +1883,14 @@
     "title": "M-Coloring Problem",
     "topic": "Recursion & Backtracking",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22M-Coloring+Problem%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22M-Coloring+Problem%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 112,
-    "link_match_score": 0.649,
-    "link_source": "safe_search"
+    "link_match_score": 0.649
   },
   {
     "id": "sde-059",
@@ -2011,15 +1899,14 @@
     "title": "Rat in a Maze",
     "topic": "Recursion & Backtracking",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Rat+in+a+Maze%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Rat+in+a+Maze%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 113,
-    "link_match_score": 0.64,
-    "link_source": "safe_search"
+    "link_match_score": 0.64
   },
   {
     "id": "sde-060",
@@ -2027,17 +1914,16 @@
     "curriculum_rank": 17,
     "title": "Word Break (print all ways)",
     "topic": "Recursion & Backtracking",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Word+Break+%28print+all+ways%29%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/word-break/",
+    "leetcode_slug": "word-break",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 114,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-061",
@@ -2045,17 +1931,16 @@
     "curriculum_rank": 17,
     "title": "Print all permutations of a string or array",
     "topic": "Recursion & Backtracking",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Print+all+permutations+of+a+string+or+array%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/permutations/",
+    "leetcode_slug": "permutations",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 115,
     "paid_only": false,
-    "link_match_score": 0.9,
-    "link_source": "safe_search"
+    "link_match_score": 0.9
   },
   {
     "id": "sde-044",
@@ -2072,8 +1957,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 116,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-045",
@@ -2082,15 +1966,14 @@
     "title": "N Meetings in One Room",
     "topic": "Greedy Algorithms",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22N+Meetings+in+One+Room%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22N+Meetings+in+One+Room%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 117,
-    "link_match_score": 0.686,
-    "link_source": "safe_search"
+    "link_match_score": 0.686
   },
   {
     "id": "sde-046",
@@ -2099,15 +1982,14 @@
     "title": "Fractional Knapsack",
     "topic": "Greedy Algorithms",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Fractional+Knapsack%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Fractional+Knapsack%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 118,
-    "link_match_score": 0.538,
-    "link_source": "safe_search"
+    "link_match_score": 0.538
   },
   {
     "id": "sde-047",
@@ -2116,15 +1998,14 @@
     "title": "Job Sequencing Problem",
     "topic": "Greedy Algorithms",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Job+Sequencing+Problem%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Job+Sequencing+Problem%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 119,
-    "link_match_score": 0.619,
-    "link_source": "safe_search"
+    "link_match_score": 0.619
   },
   {
     "id": "sde-048",
@@ -2132,17 +2013,16 @@
     "curriculum_rank": 18,
     "title": "Minimum Coins to Make Sum",
     "topic": "Greedy Algorithms",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Minimum+Coins+to+Make+Sum%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/minimum-cost-to-make-array-equal/",
+    "leetcode_slug": "minimum-cost-to-make-array-equal",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 120,
     "paid_only": false,
-    "link_match_score": 0.737,
-    "link_source": "safe_search"
+    "link_match_score": 0.737
   },
   {
     "id": "sde-049",
@@ -2150,17 +2030,16 @@
     "curriculum_rank": 18,
     "title": "Minimum Platforms",
     "topic": "Greedy Algorithms",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Minimum+Platforms%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/minimum-path-sum/",
+    "leetcode_slug": "minimum-path-sum",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 121,
     "paid_only": false,
-    "link_match_score": 0.727,
-    "link_source": "safe_search"
+    "link_match_score": 0.727
   },
   {
     "id": "sde-062",
@@ -2177,8 +2056,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 122,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-063",
@@ -2195,8 +2073,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 123,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-064",
@@ -2205,15 +2082,14 @@
     "title": "Find nth root of m",
     "topic": "Binary Search",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Find+nth+root+of+m%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Find+nth+root+of+m%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 124,
-    "link_match_score": 0.634,
-    "link_source": "safe_search"
+    "link_match_score": 0.634
   },
   {
     "id": "sde-065",
@@ -2222,15 +2098,14 @@
     "title": "K-th element of two arrays",
     "topic": "Binary Search",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22K-th+element+of+two+arrays%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22K-th+element+of+two+arrays%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 125,
-    "link_match_score": 0.712,
-    "link_source": "safe_search"
+    "link_match_score": 0.712
   },
   {
     "id": "sde-066",
@@ -2238,17 +2113,16 @@
     "curriculum_rank": 19,
     "title": "Allocate Books",
     "topic": "Binary Search",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Allocate+Books%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/allocate-mailboxes/",
+    "leetcode_slug": "allocate-mailboxes",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 126,
     "paid_only": false,
-    "link_match_score": 0.75,
-    "link_source": "safe_search"
+    "link_match_score": 0.75
   },
   {
     "id": "sde-067",
@@ -2257,15 +2131,14 @@
     "title": "Aggressive Cows",
     "topic": "Binary Search",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Aggressive+Cows%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Aggressive+Cows%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 127,
-    "link_match_score": 0.645,
-    "link_source": "safe_search"
+    "link_match_score": 0.645
   },
   {
     "id": "sde-068",
@@ -2274,15 +2147,14 @@
     "title": "Matrix Median",
     "topic": "Binary Search",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Matrix+Median%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Matrix+Median%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 128,
-    "link_match_score": 0.688,
-    "link_source": "safe_search"
+    "link_match_score": 0.688
   },
   {
     "id": "sde-069",
@@ -2290,17 +2162,16 @@
     "curriculum_rank": 19,
     "title": "Median of 2 sorted arrays",
     "topic": "Binary Search",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Median+of+2+sorted+arrays%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "leetcode_slug": "median-of-two-sorted-arrays",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 129,
     "paid_only": false,
-    "link_match_score": 0.923,
-    "link_source": "safe_search"
+    "link_match_score": 0.923
   },
   {
     "id": "sde-070",
@@ -2317,8 +2188,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 130,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-071",
@@ -2335,8 +2205,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 131,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-072",
@@ -2353,8 +2222,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 132,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "verified_override"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-073",
@@ -2363,15 +2231,14 @@
     "title": "Max heap - Min Heap Implementation",
     "topic": "Heaps",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Max+heap+-+Min+Heap+Implementation%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Max+heap+-+Min+Heap+Implementation%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 133,
-    "link_match_score": 0.571,
-    "link_source": "safe_search"
+    "link_match_score": 0.571
   },
   {
     "id": "sde-074",
@@ -2379,17 +2246,16 @@
     "curriculum_rank": 20,
     "title": "Merge K sorted arrays",
     "topic": "Heaps",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Merge+K+sorted+arrays%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/merge-sorted-array/",
+    "leetcode_slug": "merge-sorted-array",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 134,
     "paid_only": false,
-    "link_match_score": 0.923,
-    "link_source": "safe_search"
+    "link_match_score": 0.923
   },
   {
     "id": "sde-075",
@@ -2398,15 +2264,14 @@
     "title": "Maximum Sum Combination",
     "topic": "Heaps",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Maximum+Sum+Combination%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Maximum+Sum+Combination%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 135,
-    "link_match_score": 0.677,
-    "link_source": "safe_search"
+    "link_match_score": 0.677
   },
   {
     "id": "sde-076",
@@ -2423,8 +2288,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 136,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-077",
@@ -2432,17 +2296,16 @@
     "curriculum_rank": 21,
     "title": "Implement Stack using Arrays",
     "topic": "Stacks and Queues - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Implement+Stack+using+Arrays%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/implement-stack-using-queues/",
+    "leetcode_slug": "implement-stack-using-queues",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 137,
     "paid_only": false,
-    "link_match_score": 0.821,
-    "link_source": "safe_search"
+    "link_match_score": 0.821
   },
   {
     "id": "sde-078",
@@ -2450,17 +2313,16 @@
     "curriculum_rank": 21,
     "title": "Implement Queue using Arrays",
     "topic": "Stacks and Queues - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Implement+Queue+using+Arrays%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+    "leetcode_slug": "implement-queue-using-stacks",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 138,
     "paid_only": false,
-    "link_match_score": 0.857,
-    "link_source": "safe_search"
+    "link_match_score": 0.857
   },
   {
     "id": "sde-079",
@@ -2477,8 +2339,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 139,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-080",
@@ -2495,8 +2356,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 140,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-081",
@@ -2513,8 +2373,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 141,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-082",
@@ -2523,15 +2382,14 @@
     "title": "Sort a Stack",
     "topic": "Stacks and Queues - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Sort+a+Stack%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Sort+a+Stack%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 142,
-    "link_match_score": 0.667,
-    "link_source": "safe_search"
+    "link_match_score": 0.667
   },
   {
     "id": "sde-083",
@@ -2548,8 +2406,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 143,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-084",
@@ -2566,8 +2423,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 144,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-085",
@@ -2584,8 +2440,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 145,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-086",
@@ -2602,8 +2457,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 146,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-087",
@@ -2620,8 +2474,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 147,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-088",
@@ -2638,8 +2491,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 148,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-089",
@@ -2656,8 +2508,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 149,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-090",
@@ -2665,17 +2516,16 @@
     "curriculum_rank": 22,
     "title": "Next Smaller Element",
     "topic": "Stacks and Queues - II",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Next+Smaller+Element%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/next-greater-element-i/",
+    "leetcode_slug": "next-greater-element-i",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 150,
     "paid_only": false,
-    "link_match_score": 0.762,
-    "link_source": "safe_search"
+    "link_match_score": 0.762
   },
   {
     "id": "sde-091",
@@ -2684,15 +2534,14 @@
     "title": "The Celebrity Problem",
     "topic": "Stacks and Queues - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22The+Celebrity+Problem%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22The+Celebrity+Problem%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 151,
-    "link_match_score": 0.667,
-    "link_source": "safe_search"
+    "link_match_score": 0.667
   },
   {
     "id": "sde-092",
@@ -2701,15 +2550,14 @@
     "title": "Maximum of Minimums for Every Window Size",
     "topic": "Stacks and Queues - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Maximum+of+Minimums+for+Every+Window+Size%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Maximum+of+Minimums+for+Every+Window+Size%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 152,
-    "link_match_score": 0.578,
-    "link_source": "safe_search"
+    "link_match_score": 0.578
   },
   {
     "id": "sde-153",
@@ -2718,15 +2566,14 @@
     "title": "BFS & DFS Traversal Techniques",
     "topic": "Graphs - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22BFS+%26+DFS+Traversal+Techniques%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22BFS+%26+DFS+Traversal+Techniques%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 153,
-    "link_match_score": 0.511,
-    "link_source": "safe_search"
+    "link_match_score": 0.511
   },
   {
     "id": "sde-154",
@@ -2743,8 +2590,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 154,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-155",
@@ -2761,8 +2607,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 155,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-156",
@@ -2770,17 +2615,16 @@
     "curriculum_rank": 23,
     "title": "Detect A cycle in Undirected Graph using BFS",
     "topic": "Graphs - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Undirected+Graph+using+BFS%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph/",
+    "leetcode_slug": "distance-to-a-cycle-in-undirected-graph",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 156,
     "paid_only": true,
-    "link_match_score": 0.747,
-    "link_source": "safe_search"
+    "link_match_score": 0.747
   },
   {
     "id": "sde-157",
@@ -2788,17 +2632,16 @@
     "curriculum_rank": 23,
     "title": "Detect A cycle in Undirected Graph using DFS",
     "topic": "Graphs - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Undirected+Graph+using+DFS%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/distance-to-a-cycle-in-undirected-graph/",
+    "leetcode_slug": "distance-to-a-cycle-in-undirected-graph",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 157,
     "paid_only": true,
-    "link_match_score": 0.747,
-    "link_source": "safe_search"
+    "link_match_score": 0.747
   },
   {
     "id": "sde-158",
@@ -2807,15 +2650,14 @@
     "title": "Detect A cycle in Directed Graph using BFS",
     "topic": "Graphs - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Directed+Graph+using+BFS%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Directed+Graph+using+BFS%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 158,
-    "link_match_score": 0.716,
-    "link_source": "safe_search"
+    "link_match_score": 0.716
   },
   {
     "id": "sde-159",
@@ -2824,15 +2666,14 @@
     "title": "Detect A cycle in Directed Graph using DFS",
     "topic": "Graphs - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Directed+Graph+using+DFS%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Detect+A+cycle+in+Directed+Graph+using+DFS%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 159,
-    "link_match_score": 0.716,
-    "link_source": "safe_search"
+    "link_match_score": 0.716
   },
   {
     "id": "sde-160",
@@ -2849,8 +2690,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 160,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-161",
@@ -2859,15 +2699,14 @@
     "title": "Topological sort or Kahn's algorithm",
     "topic": "Graphs - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Topological+sort+or+Kahn%27s+algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Topological+sort+or+Kahn%27s+algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 161,
-    "link_match_score": 0.536,
-    "link_source": "safe_search"
+    "link_match_score": 0.536
   },
   {
     "id": "sde-162",
@@ -2876,15 +2715,14 @@
     "title": "Find the MST weight - Prim's Algorithm",
     "topic": "Graphs - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Find+the+MST+weight+-+Prim%27s+Algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Find+the+MST+weight+-+Prim%27s+Algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 162,
-    "link_match_score": 0.556,
-    "link_source": "safe_search"
+    "link_match_score": 0.556
   },
   {
     "id": "sde-163",
@@ -2893,15 +2731,14 @@
     "title": "Find the MST weight - Kruskal's Algorithm",
     "topic": "Graphs - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Find+the+MST+weight+-+Kruskal%27s+Algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Find+the+MST+weight+-+Kruskal%27s+Algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 163,
-    "link_match_score": 0.571,
-    "link_source": "safe_search"
+    "link_match_score": 0.571
   },
   {
     "id": "sde-164",
@@ -2910,15 +2747,14 @@
     "title": "Floyd Warshall Algorithm",
     "topic": "Graphs - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Floyd+Warshall+Algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Floyd+Warshall+Algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 164,
-    "link_match_score": 0.489,
-    "link_source": "safe_search"
+    "link_match_score": 0.489
   },
   {
     "id": "sde-165",
@@ -2927,15 +2763,14 @@
     "title": "Bellman-Ford Algorithm",
     "topic": "Graphs - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Bellman-Ford+Algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Bellman-Ford+Algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 165,
-    "link_match_score": 0.476,
-    "link_source": "safe_search"
+    "link_match_score": 0.476
   },
   {
     "id": "sde-166",
@@ -2944,15 +2779,14 @@
     "title": "Dijkstra's Algorithm",
     "topic": "Graphs - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Dijkstra%27s+Algorithm%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Dijkstra%27s+Algorithm%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 166,
-    "link_match_score": 0.5,
-    "link_source": "safe_search"
+    "link_match_score": 0.5
   },
   {
     "id": "sde-167",
@@ -2969,8 +2803,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 167,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-168",
@@ -2987,8 +2820,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 168,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-169",
@@ -3005,8 +2837,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 169,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-170",
@@ -3023,8 +2854,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 170,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-171",
@@ -3041,8 +2871,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 171,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-172",
@@ -3050,17 +2879,16 @@
     "curriculum_rank": 25,
     "title": "Maximum Sum Increasing Subsequence",
     "topic": "Dynamic Programming - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Maximum+Sum+Increasing+Subsequence%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "leetcode_slug": "longest-increasing-subsequence",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 172,
     "paid_only": false,
-    "link_match_score": 0.75,
-    "link_source": "safe_search"
+    "link_match_score": 0.75
   },
   {
     "id": "sde-173",
@@ -3068,17 +2896,16 @@
     "curriculum_rank": 25,
     "title": "Matrix Chain Multiplication",
     "topic": "Dynamic Programming - I",
-    "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Matrix+Chain+Multiplication%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
-    "leetcode_slug": null,
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/sparse-matrix-multiplication/",
+    "leetcode_slug": "sparse-matrix-multiplication",
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 173,
     "paid_only": true,
-    "link_match_score": 0.764,
-    "link_source": "safe_search"
+    "link_match_score": 0.764
   },
   {
     "id": "sde-174",
@@ -3087,15 +2914,14 @@
     "title": "0-1 Knapsack",
     "topic": "Dynamic Programming - I",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%220-1+Knapsack%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%220-1+Knapsack%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 174,
-    "link_match_score": 0.476,
-    "link_source": "safe_search"
+    "link_match_score": 0.476
   },
   {
     "id": "sde-175",
@@ -3112,8 +2938,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 175,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-176",
@@ -3130,8 +2955,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 176,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-177",
@@ -3148,8 +2972,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 177,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-178",
@@ -3166,8 +2989,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 178,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-179",
@@ -3184,8 +3006,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 179,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-180",
@@ -3202,8 +3023,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 180,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-181",
@@ -3212,15 +3032,14 @@
     "title": "Job Sequencing Problem",
     "topic": "Dynamic Programming - II",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Job+Sequencing+Problem%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Job+Sequencing+Problem%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 181,
-    "link_match_score": 0.619,
-    "link_source": "safe_search"
+    "link_match_score": 0.619
   },
   {
     "id": "sde-182",
@@ -3237,8 +3056,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 182,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-183",
@@ -3255,8 +3073,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 183,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-184",
@@ -3273,8 +3090,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 184,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-185",
@@ -3291,8 +3107,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 185,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-186",
@@ -3309,8 +3124,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 186,
     "paid_only": true,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-187",
@@ -3327,8 +3141,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 187,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-188",
@@ -3345,8 +3158,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 188,
     "paid_only": false,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-189",
@@ -3363,8 +3175,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 189,
     "paid_only": true,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-190",
@@ -3381,8 +3192,7 @@
     "deadline": "2026-10-31",
     "curriculum_order": 190,
     "paid_only": true,
-    "link_match_score": 1.0,
-    "link_source": "exact_or_imported"
+    "link_match_score": 1.0
   },
   {
     "id": "sde-191",
@@ -3391,14 +3201,13 @@
     "title": "Power Set",
     "topic": "Trie",
     "difficulty": "Unknown",
-    "url": "https://www.google.com/search?q=%22Power+Set%22+Striver+SDE+Sheet+site%3Atakeuforward.org+OR+site%3Aleetcode.com%2Fproblems+OR+site%3Ageeksforgeeks.org%2Fproblems",
+    "url": "https://www.google.com/search?q=%22Power+Set%22+Striver+DSA+problem+site%3Atakeuforward.org+OR+site%3Ageeksforgeeks.org",
     "leetcode_slug": null,
     "sheet": "Striver SDE Sheet",
     "official_sheet_url": "https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems",
     "target_status": "not_started",
     "deadline": "2026-10-31",
     "curriculum_order": 191,
-    "link_match_score": 0.667,
-    "link_source": "safe_search"
+    "link_match_score": 0.667
   }
 ]

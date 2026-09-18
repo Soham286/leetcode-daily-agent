@@ -1,4 +1,4 @@
-﻿import json
+import json
 import random
 from datetime import date
 from pathlib import Path
@@ -55,52 +55,20 @@ def choose_new_questions(
         if record["status"] == "not_started":
             available.append(question)
 
-    selected = []
-
-    while available and len(selected) < count:
-        active_rank = min(
-            question.get("curriculum_rank", 999)
-            for question in available
+    available.sort(
+        key=lambda question: (
+            question.get("curriculum_rank", 999),
+            question.get("curriculum_order", 999),
+            question.get("sheet_order", 999)
         )
+    )
 
-        active_topic_questions = [
-            question
-            for question in available
-            if question.get(
-                "curriculum_rank",
-                999
-            ) == active_rank
-        ]
-
-        remaining_slots = count - len(selected)
-        sample_size = min(
-            remaining_slots,
-            len(active_topic_questions)
-        )
-
-        topic_selection = random.sample(
-            active_topic_questions,
-            sample_size
-        )
-
-        selected.extend(topic_selection)
-
-        selected_ids = {
-            question["id"]
-            for question in topic_selection
-        }
-
-        available = [
-            question
-            for question in available
-            if question["id"] not in selected_ids
-        ]
+    selected = available[:count]
 
     for question in selected:
         question["assignment_type"] = "new"
 
     return selected
-
 
 def choose_review_questions(
     tracker,
