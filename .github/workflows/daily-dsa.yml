@@ -1,0 +1,54 @@
+﻿name: Daily DSA Questions
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: "America/Los_Angeles"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-dsa-questions
+  cancel-in-progress: false
+
+jobs:
+  send-daily-questions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send daily questions
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
+        run: python -u src/main.py
+
+      - name: Save tracker updates
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracker.json
+
+          if git diff --cached --quiet; then
+            echo "No tracker changes to commit."
+          else
+            git commit -m "Update daily DSA tracker"
+            git push
+          fi
