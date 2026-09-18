@@ -1,7 +1,15 @@
 ﻿import json
 import random
-from datetime import date, timedelta
+from datetime import date
 from pathlib import Path
+
+from plan_config import (
+    WEEKDAY_NEW_QUESTIONS,
+    WEEKDAY_REVIEW_QUESTIONS,
+    WEEKEND_NEW_QUESTIONS,
+    WEEKEND_REVIEW_QUESTIONS
+)
+from progress_tracker import get_question_record
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -9,45 +17,214 @@ QUESTIONS_FILE = PROJECT_ROOT / "data" / "questions.json"
 
 
 def load_questions():
-    with QUESTIONS_FILE.open("r", encoding="utf-8-sig") as file:
+    with QUESTIONS_FILE.open(
+        "r",
+        encoding="utf-8-sig"
+    ) as file:
         return json.load(file)
 
 
-def get_slug(question):
-    return question["url"].rstrip("/").split("/")[-1]
+def daily_targets():
+    weekday = date.today().weekday()
+
+    if weekday < 5:
+        return (
+            WEEKDAY_NEW_QUESTIONS,
+            WEEKDAY_REVIEW_QUESTIONS
+        )
+
+    return (
+        WEEKEND_NEW_QUESTIONS,
+        WEEKEND_REVIEW_QUESTIONS
+    )
 
 
-def select_daily_questions(tracker, number_of_questions=3):
-    questions = load_questions()
-    solved_slugs = set(tracker.get("known_solved_slugs", []))
+def choose_new_questions(
+    tracker,
+    question_bank,
+    count
+):
+    available = []
 
-    cutoff = date.today() - timedelta(days=7)
-    recently_assigned = set()
+    for question in question_bank:
+        record = get_question_record(
+            tracker,
+            question["id"]
+        )
 
-    for assignment in tracker.get("assignments", []):
-        assignment_date = date.fromisoformat(assignment["date"])
+        if record["status"] == "not_started":
+            available.append(question)
 
-        if assignment_date >= cutoff:
-            recently_assigned.update(
-                question["slug"]
-                for question in assignment["questions"]
-            )
+    selected = []
 
-    available = [
-        question
-        for question in questions
-        if get_slug(question) not in solved_slugs
-        and get_slug(question) not in recently_assigned
-    ]
+    while available and len(selected) < count:
+        active_rank = min(
+            question.get("curriculum_rank", 999)
+            for question in available
+        )
 
-    if len(available) < number_of_questions:
-        available = [
+        active_topic_questions = [
             question
-            for question in questions
-            if get_slug(question) not in solved_slugs
+            for question in available
+            if question.get(
+                "curriculum_rank",
+                999
+            ) == active_rank
         ]
 
-    if len(available) < number_of_questions:
-        available = questions.copy()
+        remaining_slots = count - len(selected)
+        sample_size = min(
+            remaining_slots,
+            len(active_topic_questions)
+        )
 
-    return random.sample(available, number_of_questions)
+        topic_selection = random.sample(
+            active_topic_questions,
+            sample_size
+        )
+
+        selected.extend(topic_selection)
+
+        selected_ids = {
+            question["id"]
+            for question in topic_selection
+        }
+
+        available = [
+            question
+            for question in available
+            if question["id"] not in selected_ids
+        ]
+
+    for question in selected:
+        question["assignment_type"] = "new"
+
+    return selected
+
+
+def choose_review_questions(
+    tracker,
+    question_bank,
+    count
+):
+    today = date.today()
+    questions_by_id = {
+        question["id"]: question
+        for question in question_bank
+    }
+
+    due = []
+    weak = []
+    recent = []
+
+    for question_id, record in tracker.get(
+        "question_progress",
+        {}
+    ).items():
+        question = questions_by_id.get(question_id)
+
+        if not question:
+            continue
+
+        next_review = record.get("next_review_on")
+
+        if next_review:
+            try:
+                if date.fromisoformat(next_review) <= today:
+                    due.append(question)
+                    continue
+            except ValueError:
+                pass
+
+        if record["status"] in {
+            "retry",
+            "solved_with_help",
+            "attempted",
+            "started",
+            "assigned"
+        }:
+            weak.append(question)
+            continue
+
+        if record["status"] in {
+            "solved",
+            "solved_independently",
+            "reviewed"
+        }:
+            recent.append(question)
+
+    candidates = due + weak + recent
+    unique_candidates = []
+    seen_ids = set()
+
+    for question in candidates:
+        if question["id"] in seen_ids:
+            continue
+
+        seen_ids.add(question["id"])
+        unique_candidates.append(question)
+
+    if len(unique_candidates) <= count:
+        selected = unique_candidates
+    else:
+        selected = random.sample(
+            unique_candidates,
+            count
+        )
+
+    for question in selected:
+        question["assignment_type"] = "review"
+
+    return selected
+
+
+def select_daily_questions(tracker):
+    question_bank = load_questions()
+    new_target, review_target = daily_targets()
+
+    new_questions = choose_new_questions(
+        tracker,
+        question_bank,
+        new_target
+    )
+
+    review_questions = choose_review_questions(
+        tracker,
+        question_bank,
+        review_target
+    )
+
+    selected_ids = {
+        question["id"]
+        for question in new_questions + review_questions
+    }
+
+    missing = (
+        new_target
+        + review_target
+        - len(new_questions)
+        - len(review_questions)
+    )
+
+    if missing > 0:
+        additional = []
+
+        for question in question_bank:
+            if question["id"] in selected_ids:
+                continue
+
+            record = get_question_record(
+                tracker,
+                question["id"]
+            )
+
+            if record["status"] == "not_started":
+                question["assignment_type"] = "new"
+                additional.append(question)
+
+            if len(additional) == missing:
+                break
+
+        new_questions.extend(additional)
+
+    return new_questions + review_questions

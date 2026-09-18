@@ -1,0 +1,64 @@
+{
+    "assignments": [
+        {
+            "date": "2026-09-15",
+            "questions": [
+                {
+                    "id": 3,
+                    "title": "Longest Substring Without Repeating Characters",
+                    "difficulty": "Medium",
+                    "topic": "Sliding Window",
+                    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+                    "slug": "longest-substring-without-repeating-characters",
+                    "status": "pending",
+                    "assigned_at": "2026-09-15T17:20:49.747697-07:00",
+                    "solved_at": null
+                },
+                {
+                    "id": 49,
+                    "title": "Group Anagrams",
+                    "difficulty": "Medium",
+                    "topic": "Hash Table",
+                    "url": "https://leetcode.com/problems/group-anagrams/",
+                    "slug": "group-anagrams",
+                    "status": "pending",
+                    "assigned_at": "2026-09-15T17:20:49.747697-07:00",
+                    "solved_at": null
+                },
+                {
+                    "id": 121,
+                    "title": "Best Time to Buy and Sell Stock",
+                    "difficulty": "Easy",
+                    "topic": "Arrays",
+                    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+                    "slug": "best-time-to-buy-and-sell-stock",
+                    "status": "pending",
+                    "assigned_at": "2026-09-15T17:20:49.747697-07:00",
+                    "solved_at": null
+                }
+            ]
+        }
+    ],
+    "known_solved_slugs": [
+        "check-if-there-is-a-valid-path-in-a-grid",
+        "count-subarrays-with-majority-element-ii",
+        "detect-cycles-in-2d-grid",
+        "furthest-point-from-origin",
+        "jump-game-ix",
+        "maximize-the-distance-between-points-on-a-square",
+        "maximum-building-height",
+        "maximum-distance-between-a-pair-of-values",
+        "minimize-hamming-distance-after-swap-operations",
+        "minimum-moves-to-make-array-complementary",
+        "minimum-operations-to-make-a-uni-value-grid",
+        "minimum-total-distance-traveled",
+        "rotate-function",
+        "rotate-image",
+        "rotate-string",
+        "rotated-digits",
+        "rotating-the-box",
+        "sum-of-distances",
+        "two-furthest-houses-with-different-colors",
+        "words-within-two-edits-of-dictionary"
+    ]
+}
