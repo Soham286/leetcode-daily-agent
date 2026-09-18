@@ -1,0 +1,54 @@
+﻿name: Weekly DSA Progress Report
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 20 * * 0"
+      timezone: "America/Los_Angeles"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dsa-tracker
+  cancel-in-progress: false
+
+jobs:
+  weekly-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send weekly report
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
+        run: python -u src/weekly_report.py
+
+      - name: Save tracker
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracker.json
+
+          if git diff --cached --quiet; then
+            echo "No tracker changes."
+          else
+            git commit -m "Update weekly DSA tracker"
+            git push
+          fi
