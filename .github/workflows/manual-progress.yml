@@ -1,0 +1,115 @@
+﻿name: Manual DSA Progress Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      question_id:
+        description: "Question ID shown in the dashboard, for example sde-108"
+        required: true
+        type: string
+
+      outcome:
+        description: "Your result"
+        required: true
+        default: solved_independently
+        type: choice
+        options:
+          - started
+          - attempted
+          - solved_independently
+          - solved_with_help
+          - retry
+          - reviewed
+          - mastered
+
+      confidence:
+        description: "Confidence from 1 to 5"
+        required: true
+        default: "3"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+
+      time_minutes:
+        description: "Minutes spent; enter 0 if not recorded"
+        required: true
+        default: "0"
+        type: string
+
+      hint_used:
+        description: "Did you use a hint?"
+        required: true
+        default: false
+        type: boolean
+
+      solution_viewed:
+        description: "Did you view the solution?"
+        required: true
+        default: false
+        type: boolean
+
+      mistake:
+        description: "Main mistake or difficulty"
+        required: false
+        default: ""
+        type: string
+
+      pattern:
+        description: "Pattern or lesson learned"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dsa-tracker
+  cancel-in-progress: false
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update tracker
+        env:
+          MANUAL_QUESTION_ID: ${{ inputs.question_id }}
+          MANUAL_STATUS: ${{ inputs.outcome }}
+          MANUAL_CONFIDENCE: ${{ inputs.confidence }}
+          MANUAL_TIME_MINUTES: ${{ inputs.time_minutes }}
+          MANUAL_HINT_USED: ${{ inputs.hint_used }}
+          MANUAL_SOLUTION_VIEWED: ${{ inputs.solution_viewed }}
+          MANUAL_MISTAKE: ${{ inputs.mistake }}
+          MANUAL_PATTERN: ${{ inputs.pattern }}
+        run: python src/manual_progress.py
+
+      - name: Commit tracker update
+        env:
+          QUESTION_ID: ${{ inputs.question_id }}
+          OUTCOME: ${{ inputs.outcome }}
+        run: |
+          git config user.name "dsa-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/tracker.json
+
+          if git diff --cached --quiet; then
+            echo "No tracker changes were produced."
+            exit 0
+          fi
+
+          git commit -m "Track ${QUESTION_ID} as ${OUTCOME}"
+          git pull --rebase origin main
+          git push origin main
