@@ -1,6 +1,9 @@
 ﻿import html
+import json
+import math
 import sys
-from datetime import datetime, timedelta
+from collections import Counter
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -10,34 +13,246 @@ import streamlit as st
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(PROJECT_ROOT / "src"))
+SRC_DIR = PROJECT_ROOT / "src"
+QUESTIONS_FILE = PROJECT_ROOT / "data" / "questions.json"
+TRACKER_FILE = PROJECT_ROOT / "data" / "tracker.json"
 
-from progress_tracker import load_tracker, sync_leetcode_progress
+sys.path.insert(0, str(SRC_DIR))
+
+from progress_tracker import load_tracker
 
 
-LOCAL_TIMEZONE = ZoneInfo("America/Los_Angeles")
+TIMEZONE = ZoneInfo("America/Los_Angeles")
+DEADLINE = date(2026, 10, 31)
+TOTAL_SHEET_QUESTIONS = 191
+
+COMPLETED_STATUSES = {
+    "solved",
+    "solved_with_help",
+    "solved_independently",
+    "reviewed",
+    "mastered",
+}
+
+ACTIVE_STATUSES = {
+    "assigned",
+    "started",
+    "attempted",
+    "retry",
+}
+
+STATUS_LABELS = {
+    "not_started": "Not started",
+    "assigned": "Assigned",
+    "started": "Started",
+    "attempted": "Attempted",
+    "solved": "Solved",
+    "solved_with_help": "Solved with help",
+    "solved_independently": "Solved independently",
+    "reviewed": "Reviewed",
+    "mastered": "Mastered",
+    "retry": "Retry needed",
+}
+
+STATUS_COLORS = {
+    "Not started": "#334155",
+    "Assigned": "#f59e0b",
+    "Started": "#38bdf8",
+    "Attempted": "#a78bfa",
+    "Solved": "#22c55e",
+    "Solved with help": "#84cc16",
+    "Solved independently": "#10b981",
+    "Reviewed": "#14b8a6",
+    "Mastered": "#06b6d4",
+    "Retry needed": "#ef4444",
+}
+
+
+def load_catalog():
+    with QUESTIONS_FILE.open("r", encoding="utf-8-sig") as file:
+        raw = json.load(file)
+
+    if isinstance(raw, dict):
+        questions = raw.get("questions", list(raw.values()))
+    else:
+        questions = raw
+
+    return {
+        str(question.get("id", question.get("slug", index))): question
+        for index, question in enumerate(questions, start=1)
+        if isinstance(question, dict)
+    }
+
+
+def question_value(question, *keys, default=""):
+    for key in keys:
+        value = question.get(key)
+        if value not in (None, ""):
+            return value
+    return default
+
+
+def safe_text(value):
+    return html.escape(str(value or ""))
+
+
+def format_status(status):
+    return STATUS_LABELS.get(status, str(status).replace("_", " ").title())
+
+
+def status_class(status):
+    if status in COMPLETED_STATUSES:
+        return "status-completed"
+    if status == "retry":
+        return "status-retry"
+    if status in {"started", "attempted"}:
+        return "status-active"
+    return "status-pending"
+
+
+def get_question_details(question_id, catalog):
+    question = catalog.get(str(question_id), {})
+    return {
+        "id": str(question_id),
+        "title": question_value(
+            question,
+            "title",
+            "name",
+            "problem",
+            "problem_name",
+            default=str(question_id),
+        ),
+        "topic": question_value(
+            question,
+            "topic",
+            "section",
+            "category",
+            default="General",
+        ),
+        "difficulty": question_value(
+            question,
+            "difficulty",
+            "level",
+            default="Unknown",
+        ),
+        "url": question_value(
+            question,
+            "url",
+            "link",
+            "leetcode_url",
+            default="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+        ),
+    }
+
+
+def assignment_for_date(assignments, target_date):
+    target = target_date.isoformat()
+    return next(
+        (
+            assignment
+            for assignment in reversed(assignments)
+            if assignment.get("date") == target
+        ),
+        None,
+    )
+
+
+def build_history(assignments, catalog, states):
+    rows = []
+
+    for assignment in assignments:
+        for item in assignment.get("questions", []):
+            question_id = (
+                item.get("id")
+                if isinstance(item, dict)
+                else str(item)
+            )
+            assignment_type = (
+                item.get("type", "new")
+                if isinstance(item, dict)
+                else "new"
+            )
+
+            details = get_question_details(question_id, catalog)
+            state = states.get(str(question_id), {})
+            status = state.get("status", "not_started")
+
+            rows.append(
+                {
+                    "Date": assignment.get("date", ""),
+                    "Question": details["title"],
+                    "Topic": details["topic"],
+                    "Difficulty": details["difficulty"],
+                    "Type": assignment_type.title(),
+                    "Status": format_status(status),
+                    "URL": details["url"],
+                }
+            )
+
+    return pd.DataFrame(rows)
+
+
+def calculate_streak(assignments, states, today):
+    assignment_dates = {}
+
+    for assignment in assignments:
+        try:
+            assignment_date = date.fromisoformat(assignment["date"])
+        except (KeyError, TypeError, ValueError):
+            continue
+
+        question_ids = [
+            str(item.get("id") if isinstance(item, dict) else item)
+            for item in assignment.get("questions", [])
+        ]
+
+        if question_ids:
+            assignment_dates[assignment_date] = all(
+                states.get(question_id, {}).get("status")
+                in COMPLETED_STATUSES
+                for question_id in question_ids
+            )
+
+    streak = 0
+    current_date = today
+
+    if current_date in assignment_dates and not assignment_dates[current_date]:
+        current_date -= timedelta(days=1)
+
+    while assignment_dates.get(current_date, False):
+        streak += 1
+        current_date -= timedelta(days=1)
+
+    return streak
+
 
 st.set_page_config(
-    page_title="LeetCode Mastery",
+    page_title="Striver DSA Mastery",
     page_icon="⚡",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
-
 
 st.markdown(
     """
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    html, body, [class*="css"] {
+        font-family: "Inter", sans-serif;
+    }
+
     .stApp {
         background:
-            radial-gradient(circle at 10% 10%, #172554 0%, transparent 28%),
-            radial-gradient(circle at 90% 5%, #3b0764 0%, transparent 26%),
-            linear-gradient(145deg, #020617 0%, #0f172a 55%, #111827 100%);
+            radial-gradient(circle at 8% 5%, rgba(37,99,235,.25), transparent 25%),
+            radial-gradient(circle at 92% 8%, rgba(126,34,206,.25), transparent 25%),
+            linear-gradient(145deg, #020617 0%, #0f172a 58%, #111827 100%);
         color: #f8fafc;
     }
 
     .block-container {
-        max-width: 1300px;
-        padding-top: 2rem;
+        max-width: 1400px;
+        padding-top: 1.7rem;
         padding-bottom: 4rem;
     }
 
@@ -45,13 +260,17 @@ st.markdown(
         color: #f8fafc !important;
     }
 
+    [data-testid="stSidebar"] {
+        background: rgba(2, 6, 23, .96);
+        border-right: 1px solid rgba(148, 163, 184, .15);
+    }
+
     [data-testid="stMetric"] {
-        background: rgba(15, 23, 42, 0.82);
-        border: 1px solid rgba(148, 163, 184, 0.18);
+        background: rgba(15, 23, 42, .84);
+        border: 1px solid rgba(148, 163, 184, .18);
         border-radius: 18px;
-        padding: 20px;
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
-        backdrop-filter: blur(12px);
+        padding: 18px;
+        box-shadow: 0 16px 38px rgba(0,0,0,.22);
     }
 
     [data-testid="stMetricValue"] {
@@ -59,23 +278,23 @@ st.markdown(
     }
 
     .hero {
-        padding: 28px;
-        border-radius: 24px;
+        padding: 30px;
+        border-radius: 25px;
         background:
             linear-gradient(
                 135deg,
-                rgba(37, 99, 235, 0.32),
-                rgba(126, 34, 206, 0.27)
+                rgba(37, 99, 235, .38),
+                rgba(126, 34, 206, .36)
             );
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 24px 55px rgba(0, 0, 0, 0.28);
+        border: 1px solid rgba(255,255,255,.14);
+        box-shadow: 0 24px 60px rgba(0,0,0,.3);
         margin-bottom: 24px;
     }
 
     .hero-title {
-        font-size: 2.3rem;
-        font-weight: 700;
-        margin-bottom: 6px;
+        font-size: 2.35rem;
+        font-weight: 800;
+        margin-bottom: 8px;
     }
 
     .hero-subtitle {
@@ -84,325 +303,550 @@ st.markdown(
     }
 
     .question-card {
-        min-height: 265px;
+        min-height: 295px;
         padding: 22px;
         border-radius: 20px;
-        background: rgba(15, 23, 42, 0.88);
-        border: 1px solid rgba(148, 163, 184, 0.18);
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
-        margin-bottom: 16px;
+        background: rgba(15,23,42,.88);
+        border: 1px solid rgba(148,163,184,.18);
+        box-shadow: 0 18px 42px rgba(0,0,0,.24);
+        margin-bottom: 12px;
     }
 
     .question-number {
         color: #93c5fd;
-        font-size: 0.82rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
+        font-size: .78rem;
+        font-weight: 800;
+        letter-spacing: .09em;
         text-transform: uppercase;
     }
 
     .question-title {
         color: #ffffff;
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin: 12px 0;
+        font-size: 1.15rem;
+        line-height: 1.45;
+        font-weight: 750;
+        margin: 13px 0;
+        min-height: 53px;
     }
 
     .question-meta {
         color: #cbd5e1;
+        font-size: .9rem;
         margin: 7px 0;
     }
 
-    .status-pending, .status-solved {
+    .status-completed,
+    .status-pending,
+    .status-active,
+    .status-retry {
         display: inline-block;
         padding: 5px 11px;
         border-radius: 999px;
-        font-size: 0.78rem;
+        font-size: .76rem;
         font-weight: 700;
         margin-top: 10px;
     }
 
-    .status-pending {
-        color: #fde68a;
-        background: rgba(245, 158, 11, 0.17);
-    }
-
-    .status-solved {
+    .status-completed {
+        background: rgba(34,197,94,.2);
         color: #86efac;
-        background: rgba(34, 197, 94, 0.17);
     }
 
-    .solve-link {
-        display: inline-block;
-        margin-top: 18px;
-        color: #ffffff !important;
-        background: linear-gradient(90deg, #2563eb, #7c3aed);
-        padding: 10px 16px;
-        border-radius: 10px;
-        text-decoration: none;
+    .status-pending {
+        background: rgba(245,158,11,.18);
+        color: #fcd34d;
+    }
+
+    .status-active {
+        background: rgba(56,189,248,.18);
+        color: #7dd3fc;
+    }
+
+    .status-retry {
+        background: rgba(239,68,68,.18);
+        color: #fca5a5;
+    }
+
+    .section-card {
+        padding: 22px;
+        border-radius: 20px;
+        background: rgba(15,23,42,.73);
+        border: 1px solid rgba(148,163,184,.15);
+        margin: 10px 0 20px;
+    }
+
+    .readiness-ready {
+        color: #86efac;
+        font-weight: 800;
+    }
+
+    .readiness-building {
+        color: #fcd34d;
+        font-weight: 800;
+    }
+
+    div[data-testid="stProgress"] > div > div {
+        background: linear-gradient(90deg, #2563eb, #9333ea);
+    }
+
+    .stButton > button,
+    .stLinkButton > a {
+        border-radius: 11px;
         font-weight: 700;
-    }
-
-    .section-title {
-        color: #ffffff;
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin: 28px 0 14px;
-    }
-
-    [data-testid="stSidebar"] {
-        background:
-            linear-gradient(180deg, #0f172a 0%, #172554 100%);
-        border-right: 1px solid rgba(148, 163, 184, 0.18);
-    }
-
-    [data-testid="stSidebar"] * {
-        color: #f8fafc !important;
-    }
-
-    [data-testid="stSidebar"] button {
-        background: linear-gradient(90deg, #2563eb, #7c3aed);
-        border: none;
-        color: #ffffff !important;
-        font-weight: 700;
-    }
-
-    [data-testid="stHeader"] {
-        background: rgba(2, 6, 23, 0.82);
-    }
-
-    .question-card {
-        display: flex;
-        flex-direction: column;
-        min-height: 285px;
-    }
-
-    .solve-link {
-        margin-top: auto;
-        align-self: flex-start;
     }
     </style>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
+tracker = load_tracker()
+catalog = load_catalog()
 
-@st.cache_data(ttl=300)
-def get_tracker():
-    tracker = load_tracker()
+states = tracker.get("questions", {})
+assignments = tracker.get("assignments", [])
+contests = tracker.get("contests", [])
+reflections = tracker.get("reflections", [])
 
-    try:
-        return sync_leetcode_progress(tracker), None
-    except Exception as error:
-        return tracker, str(error)
+now = datetime.now(TIMEZONE)
+today = now.date()
+today_assignment = assignment_for_date(assignments, today)
 
+completed_ids = {
+    question_id
+    for question_id, state in states.items()
+    if state.get("status") in COMPLETED_STATUSES
+}
 
-tracker, sync_error = get_tracker()
+independent_ids = {
+    question_id
+    for question_id, state in states.items()
+    if state.get("status") in {"solved_independently", "mastered"}
+}
 
-if st.sidebar.button("Refresh LeetCode progress"):
-    st.cache_data.clear()
-    st.rerun()
+assigned_ids = {
+    str(item.get("id") if isinstance(item, dict) else item)
+    for assignment in assignments
+    for item in assignment.get("questions", [])
+}
 
-st.sidebar.markdown("### LeetCode Mastery")
-st.sidebar.write("User: **sohambanerjee200**")
-st.sidebar.write("Automatic accepted-submission tracking")
-st.sidebar.write("Timezone: Los Angeles")
+pending_ids = {
+    question_id
+    for question_id in assigned_ids
+    if states.get(question_id, {}).get("status", "not_started")
+    not in COMPLETED_STATUSES
+}
 
-if sync_error:
-    st.sidebar.warning(
-        "Could not refresh LeetCode. Showing saved tracker data."
-    )
+review_due_ids = {
+    question_id
+    for question_id, state in states.items()
+    if state.get("next_review_on")
+    and state.get("next_review_on") <= today.isoformat()
+    and state.get("status") in COMPLETED_STATUSES
+}
 
+completed_count = len(completed_ids)
+remaining_count = max(TOTAL_SHEET_QUESTIONS - completed_count, 0)
+completion_rate = completed_count / TOTAL_SHEET_QUESTIONS
+independent_rate = (
+    len(independent_ids) / completed_count
+    if completed_count
+    else 0
+)
 
-all_questions = []
+days_remaining = max((DEADLINE - today).days, 0)
+required_weekly_pace = (
+    math.ceil((remaining_count / max(days_remaining, 1)) * 7)
+    if remaining_count
+    else 0
+)
 
-for assignment in tracker.get("assignments", []):
-    for question in assignment.get("questions", []):
-        row = question.copy()
-        row["assignment_date"] = assignment["date"]
-        all_questions.append(row)
+streak = calculate_streak(assignments, states, today)
 
-total = len(all_questions)
-solved = sum(q.get("status") == "solved" for q in all_questions)
-pending = total - solved
-completion = round((solved / total) * 100) if total else 0
+history_df = build_history(assignments, catalog, states)
 
-today = datetime.now(LOCAL_TIMEZONE).date().isoformat()
-today_questions = [
-    question
-    for question in all_questions
-    if question["assignment_date"] == today
-]
+recent_history = history_df.tail(10) if not history_df.empty else history_df
+recent_completed = (
+    int(recent_history["Status"].isin(
+        [format_status(status) for status in COMPLETED_STATUSES]
+    ).sum())
+    if not recent_history.empty
+    else 0
+)
+
+contest_checks = {
+    "75 sheet questions completed": completed_count >= 75,
+    "65% solved independently": independent_rate >= 0.65,
+    "7 of the latest 10 completed": recent_completed >= 7,
+    "Backlog below 10": len(pending_ids) < 10,
+}
+
+contest_score = sum(contest_checks.values())
+contest_ready = contest_score == len(contest_checks)
+
+with st.sidebar:
+    st.markdown("## ⚡ DSA Command Center")
+    st.caption("Striver SDE Sheet · 191 problems")
+    st.markdown("---")
+
+    st.markdown("**LeetCode profile**")
+    st.code("sohambanerjee200")
+
+    st.markdown("**Schedule**")
+    st.write("Weekdays: 5 new questions")
+    st.write("Weekends: 3 new + 2 revisions")
+    st.write("Maximum: 5 questions/day")
+
+    st.markdown("**Deadline**")
+    st.write(DEADLINE.strftime("%B %d, %Y"))
+    st.progress(min(completion_rate, 1.0))
+    st.caption(f"{completed_count} of {TOTAL_SHEET_QUESTIONS} completed")
+
+    st.markdown("---")
+
+    if st.button("🔄 Reload tracker", use_container_width=True):
+        st.rerun()
 
 st.markdown(
     f"""
     <div class="hero">
-        <div class="hero-title">⚡ LeetCode Mastery</div>
+        <div class="hero-title">⚡ Striver DSA Mastery</div>
         <div class="hero-subtitle">
-            Welcome back, Soham. Track consistency, master weak topics,
-            and turn daily practice into measurable progress.
+            Welcome back, Soham. Complete the full 191-question Striver SDE
+            Sheet by October 31 while building revision strength and contest readiness.
         </div>
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
-metric_columns = st.columns(4)
-metric_columns[0].metric("Questions assigned", total)
-metric_columns[1].metric("Solved", solved)
-metric_columns[2].metric("Pending", pending)
-metric_columns[3].metric("Completion rate", f"{completion}%")
+metric_columns = st.columns(6)
 
-st.markdown(
-    '<div class="section-title">Today’s challenge</div>',
-    unsafe_allow_html=True
-)
+with metric_columns[0]:
+    st.metric("Completed", completed_count, f"{completion_rate:.0%}")
 
-if today_questions:
-    columns = st.columns(3)
+with metric_columns[1]:
+    st.metric("Remaining", remaining_count)
 
-    for index, question in enumerate(today_questions):
-        status = question.get("status", "pending")
-        safe_title = html.escape(question["title"])
-        safe_topic = html.escape(question["topic"])
-        safe_difficulty = html.escape(question["difficulty"])
-        safe_url = html.escape(question["url"], quote=True)
+with metric_columns[2]:
+    st.metric("Current backlog", len(pending_ids))
 
-        with columns[index]:
+with metric_columns[3]:
+    st.metric("Reviews due", len(review_due_ids))
+
+with metric_columns[4]:
+    st.metric("Day streak", f"{streak} 🔥")
+
+with metric_columns[5]:
+    st.metric("Weekly pace needed", required_weekly_pace)
+
+st.markdown("## Today’s mission")
+
+if not today_assignment:
+    st.info(
+        "No questions have been assigned for today yet. "
+        "The daily workflow will create today’s assignment."
+    )
+else:
+    today_items = today_assignment.get("questions", [])
+    columns = st.columns(min(len(today_items), 5))
+
+    for index, item in enumerate(today_items):
+        question_id = (
+            str(item.get("id"))
+            if isinstance(item, dict)
+            else str(item)
+        )
+        assignment_type = (
+            item.get("type", "new")
+            if isinstance(item, dict)
+            else "new"
+        )
+
+        details = get_question_details(question_id, catalog)
+        state = states.get(question_id, {})
+        status = state.get("status", "assigned")
+
+        with columns[index % len(columns)]:
             st.markdown(
                 f"""
                 <div class="question-card">
                     <div class="question-number">
-                        Challenge {index + 1}
+                        Challenge {index + 1} · {safe_text(assignment_type)}
                     </div>
-                    <div class="question-title">{safe_title}</div>
+                    <div class="question-title">
+                        {safe_text(details["title"])}
+                    </div>
                     <div class="question-meta">
-                        Difficulty: {safe_difficulty}
+                        <b>Topic:</b> {safe_text(details["topic"])}
                     </div>
                     <div class="question-meta">
-                        Topic: {safe_topic}
+                        <b>Difficulty:</b> {safe_text(details["difficulty"])}
                     </div>
-                    <div class="status-{status}">
-                        {status.title()}
+                    <div class="{status_class(status)}">
+                        {safe_text(format_status(status))}
                     </div>
-                    <br>
-                    <a class="solve-link"
-                       href="{safe_url}"
-                       target="_blank">
-                       Solve on LeetCode →
-                    </a>
                 </div>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
-else:
-    st.info("No questions have been assigned today.")
 
-st.markdown(
-    '<div class="section-title">Performance overview</div>',
-    unsafe_allow_html=True
-)
+            st.link_button(
+                "Open problem ↗",
+                details["url"],
+                use_container_width=True,
+            )
 
-chart_left, chart_right = st.columns(2)
+st.markdown("## Deadline progress")
 
-if all_questions:
-    dataframe = pd.DataFrame(all_questions)
+deadline_columns = st.columns([2, 1])
 
-    status_counts = (
-        dataframe["status"]
-        .value_counts()
-        .rename_axis("Status")
-        .reset_index(name="Questions")
+with deadline_columns[0]:
+    st.markdown(
+        '<div class="section-card">',
+        unsafe_allow_html=True,
+    )
+    st.write(
+        f"**{completed_count} completed · {remaining_count} remaining · "
+        f"{days_remaining} days left**"
+    )
+    st.progress(min(completion_rate, 1.0))
+    st.caption(
+        f"Maintain approximately {required_weekly_pace} completed questions "
+        "per week to finish by October 31."
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with deadline_columns[1]:
+    projected_days = (
+        math.ceil(remaining_count / 5)
+        if remaining_count
+        else 0
+    )
+    st.metric(
+        "Minimum practice days",
+        projected_days,
+        "at 5 per day",
     )
 
-    status_chart = px.pie(
-        status_counts,
+st.markdown("## Performance overview")
+
+chart_columns = st.columns(2)
+
+status_counts = Counter(
+    format_status(state.get("status", "not_started"))
+    for state in states.values()
+)
+
+status_df = pd.DataFrame(
+    {
+        "Status": list(status_counts.keys()),
+        "Questions": list(status_counts.values()),
+    }
+)
+
+with chart_columns[0]:
+    status_figure = px.pie(
+        status_df,
         names="Status",
         values="Questions",
         hole=0.68,
+        title="Sheet status",
         color="Status",
-        color_discrete_map={
-            "solved": "#22c55e",
-            "pending": "#f59e0b"
+        color_discrete_map=STATUS_COLORS,
+    )
+    status_figure.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font_color="#e2e8f0",
+        legend_title_text="",
+        margin=dict(l=15, r=15, t=55, b=15),
+    )
+    st.plotly_chart(status_figure, use_container_width=True)
+
+topic_rows = []
+
+for question_id, question in catalog.items():
+    state = states.get(question_id, {})
+    topic_rows.append(
+        {
+            "Topic": question_value(
+                question,
+                "topic",
+                "section",
+                "category",
+                default="General",
+            ),
+            "Completed": int(
+                state.get("status") in COMPLETED_STATUSES
+            ),
         }
     )
-    status_chart.update_layout(
-        title="Solved versus pending",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        template="plotly_dark",
-        font=dict(color="#f8fafc"),
-        title_font=dict(color="#f8fafc"),
-        legend_title_text="",
-        margin=dict(l=20, r=20, t=55, b=20)
+
+topic_df = pd.DataFrame(topic_rows)
+
+with chart_columns[1]:
+    if not topic_df.empty:
+        topic_summary = (
+            topic_df.groupby("Topic", as_index=False)
+            .agg(
+                Completed=("Completed", "sum"),
+                Total=("Completed", "size"),
+            )
+        )
+        topic_summary["Progress"] = (
+            topic_summary["Completed"]
+            / topic_summary["Total"]
+            * 100
+        )
+        topic_summary = topic_summary.sort_values(
+            "Progress",
+            ascending=True,
+        ).tail(12)
+
+        topic_figure = px.bar(
+            topic_summary,
+            x="Progress",
+            y="Topic",
+            orientation="h",
+            title="Progress by topic",
+            color="Progress",
+            color_continuous_scale=["#1e3a8a", "#2563eb", "#a855f7"],
+            text=topic_summary["Progress"].map(lambda value: f"{value:.0f}%"),
+        )
+        topic_figure.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font_color="#e2e8f0",
+            coloraxis_showscale=False,
+            xaxis_title="Completion %",
+            yaxis_title="",
+            margin=dict(l=15, r=15, t=55, b=15),
+        )
+        st.plotly_chart(topic_figure, use_container_width=True)
+
+st.markdown("## Contest readiness")
+
+readiness_columns = st.columns([1, 2])
+
+with readiness_columns[0]:
+    readiness_percentage = int(
+        contest_score / len(contest_checks) * 100
     )
 
-    difficulty_counts = (
-        dataframe.groupby(["difficulty", "status"])
-        .size()
-        .reset_index(name="Questions")
-    )
-
-    difficulty_chart = px.bar(
-        difficulty_counts,
-        x="difficulty",
-        y="Questions",
-        color="status",
-        barmode="group",
-        color_discrete_map={
-            "solved": "#22c55e",
-            "pending": "#8b5cf6"
-        },
-        labels={"difficulty": "Difficulty", "status": "Status"}
-    )
-    difficulty_chart.update_layout(
-        title="Progress by difficulty",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        template="plotly_dark",
-        font=dict(color="#f8fafc"),
-        title_font=dict(color="#f8fafc"),
-        legend_title_text="",
-        margin=dict(l=20, r=20, t=55, b=20)
-    )
-    difficulty_chart.update_xaxes(gridcolor="rgba(148,163,184,0.12)")
-    difficulty_chart.update_yaxes(gridcolor="rgba(148,163,184,0.12)")
-
-    chart_left.plotly_chart(status_chart, use_container_width=True)
-    chart_right.plotly_chart(difficulty_chart, use_container_width=True)
+    if contest_ready:
+        readiness_message = (
+            '<span class="readiness-ready">Ready for a live contest</span>'
+        )
+    else:
+        readiness_message = (
+            '<span class="readiness-building">Building contest readiness</span>'
+        )
 
     st.markdown(
-        '<div class="section-title">Assignment history</div>',
-        unsafe_allow_html=True
+        f"""
+        <div class="section-card">
+            <h2>{readiness_percentage}%</h2>
+            {readiness_message}
+            <p>{contest_score} of {len(contest_checks)} readiness conditions met</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
-    history = dataframe[
-        [
-            "assignment_date",
-            "title",
-            "difficulty",
-            "topic",
-            "status",
-            "solved_at"
-        ]
-    ].copy()
+with readiness_columns[1]:
+    for label, passed in contest_checks.items():
+        icon = "✅" if passed else "⏳"
+        st.write(f"{icon} {label}")
 
-    history.columns = [
-        "Assigned",
-        "Question",
-        "Difficulty",
-        "Topic",
-        "Status",
-        "Solved at"
-    ]
+    st.caption(
+        "We will recommend your first live LeetCode contest once all four "
+        "conditions are satisfied."
+    )
 
-    history = history.sort_values("Assigned", ascending=False)
+st.markdown("## Revision queue")
+
+if not review_due_ids:
+    st.success("No revisions are currently overdue.")
+else:
+    review_rows = []
+
+    for question_id in sorted(review_due_ids):
+        details = get_question_details(question_id, catalog)
+        state = states.get(question_id, {})
+
+        review_rows.append(
+            {
+                "Question": details["title"],
+                "Topic": details["topic"],
+                "Next review": state.get("next_review_on", ""),
+                "Reviews completed": state.get("review_count", 0),
+                "Confidence": state.get("confidence") or "Not recorded",
+            }
+        )
 
     st.dataframe(
-        history,
+        pd.DataFrame(review_rows),
         use_container_width=True,
-        hide_index=True
+        hide_index=True,
     )
+
+st.markdown("## Assignment history")
+
+if history_df.empty:
+    st.info("Assignment history will appear after the first daily run.")
 else:
-    st.info("Your charts will appear after the first assignment is recorded.")
+    filter_columns = st.columns(3)
+
+    with filter_columns[0]:
+        topic_options = ["All"] + sorted(
+            history_df["Topic"].dropna().unique().tolist()
+        )
+        selected_topic = st.selectbox("Topic", topic_options)
+
+    with filter_columns[1]:
+        status_options = ["All"] + sorted(
+            history_df["Status"].dropna().unique().tolist()
+        )
+        selected_status = st.selectbox("Status", status_options)
+
+    with filter_columns[2]:
+        type_options = ["All"] + sorted(
+            history_df["Type"].dropna().unique().tolist()
+        )
+        selected_type = st.selectbox("Assignment type", type_options)
+
+    filtered_history = history_df.copy()
+
+    if selected_topic != "All":
+        filtered_history = filtered_history[
+            filtered_history["Topic"] == selected_topic
+        ]
+
+    if selected_status != "All":
+        filtered_history = filtered_history[
+            filtered_history["Status"] == selected_status
+        ]
+
+    if selected_type != "All":
+        filtered_history = filtered_history[
+            filtered_history["Type"] == selected_type
+        ]
+
+    st.dataframe(
+        filtered_history.sort_values("Date", ascending=False),
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "URL": st.column_config.LinkColumn(
+                "Problem link",
+                display_text="Open ↗",
+            )
+        },
+    )
+
+st.markdown("---")
+st.caption(
+    f"Last refreshed: {now.strftime('%B %d, %Y at %I:%M %p %Z')} · "
+    f"Contests recorded: {len(contests)} · Reflections recorded: {len(reflections)}"
+)
 
