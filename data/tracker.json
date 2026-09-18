@@ -3636,68 +3636,7 @@
       "review_interval_index": 0
     }
   },
-  "assignments": [
-    {
-      "date": "2026-09-17",
-      "created_at": "2026-09-17T23:51:04.610528-07:00",
-      "questions": [
-        {
-          "id": "sde-109",
-          "type": "new"
-        },
-        {
-          "id": "sde-106",
-          "type": "new"
-        },
-        {
-          "id": "sde-108",
-          "type": "new"
-        },
-        {
-          "id": "sde-113",
-          "type": "new"
-        },
-        {
-          "id": "sde-107",
-          "type": "new"
-        }
-      ],
-      "daily_email_sent": true,
-      "warning_one_sent": false,
-      "warning_two_sent": false,
-      "daily_email_sent_at": "2026-09-17T23:54:35.600820-07:00"
-    },
-    {
-      "date": "2026-09-18",
-      "created_at": "2026-09-18T00:10:49.146944-07:00",
-      "questions": [
-        {
-          "id": "sde-105",
-          "type": "new"
-        },
-        {
-          "id": "sde-110",
-          "type": "new"
-        },
-        {
-          "id": "sde-111",
-          "type": "new"
-        },
-        {
-          "id": "sde-112",
-          "type": "new"
-        },
-        {
-          "id": "sde-114",
-          "type": "new"
-        }
-      ],
-      "daily_email_sent": true,
-      "warning_one_sent": false,
-      "warning_two_sent": false,
-      "daily_email_sent_at": "2026-09-18T00:10:51.020291-07:00"
-    }
-  ],
+  "assignments": [],
   "contests": [],
   "reflections": []
 }

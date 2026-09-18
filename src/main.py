@@ -1,4 +1,4 @@
-﻿from notifier import send_daily_email
+from notifier import send_daily_email
 from progress_tracker import (
     get_today_questions,
     load_tracker,
@@ -13,7 +13,24 @@ from question_selector import (
 )
 
 
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
+
+
+AGENT_START_DATE = date(2026, 9, 21)
+
+
 def main():
+    local_today = datetime.now(
+        ZoneInfo("America/Los_Angeles")
+    ).date()
+
+    if local_today < AGENT_START_DATE:
+        print(
+            f"Agent begins on {AGENT_START_DATE.isoformat()}. "
+            f"Today is {local_today.isoformat()}, so no email was sent."
+        )
+        return
     question_bank = load_questions()
     tracker = load_tracker()
 
