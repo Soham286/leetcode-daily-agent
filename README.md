@@ -107,3 +107,9 @@ Then open `http://localhost:8501`.
 **Soham Banerjee**
 
 GitHub: [Soham286](https://github.com/Soham286)
+
+## Live Dashboard
+
+Track daily assignments, revision progress, topic performance, deadline pace, and contest readiness through the live dashboard:
+
+[Open the Striver DSA Mastery Dashboard](https://soham-dsa-mastery.streamlit.app/)
