@@ -146,8 +146,27 @@ def choose_review_questions(
     return selected
 
 
+
+def is_supported_platform(question):
+    url = str(
+        question.get("url")
+        or question.get("link")
+        or question.get("leetcode_url")
+        or ""
+    ).lower()
+
+    return (
+        "leetcode.com/" in url
+        or "geeksforgeeks.org/" in url
+    )
+
+
 def select_daily_questions(tracker):
-    question_bank = load_questions()
+    question_bank = [
+        question
+        for question in load_questions()
+        if is_supported_platform(question)
+    ]
     new_target, review_target = daily_targets()
 
     new_questions = choose_new_questions(
