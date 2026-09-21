@@ -1,4 +1,4 @@
-﻿name: First DSA Warning
+name: First DSA Warning
 
 on:
   workflow_dispatch:

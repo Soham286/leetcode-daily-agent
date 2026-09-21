@@ -1,4 +1,4 @@
-﻿name: Daily DSA Questions
+name: Daily DSA Questions
 
 on:
   workflow_dispatch:

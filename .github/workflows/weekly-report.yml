@@ -1,4 +1,4 @@
-﻿name: Weekly DSA Progress Report
+name: Weekly DSA Progress Report
 
 on:
   workflow_dispatch:
