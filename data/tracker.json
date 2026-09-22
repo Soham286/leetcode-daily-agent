@@ -3643,23 +3643,38 @@
       "questions": [
         {
           "id": "sde-120",
-          "type": "new"
+          "type": "new",
+          "assigned_at": "2026-09-21T12:06:41.488846-07:00",
+          "completed_at": null,
+          "status": "pending"
         },
         {
           "id": "sde-121",
-          "type": "new"
+          "type": "new",
+          "assigned_at": "2026-09-21T12:06:41.488846-07:00",
+          "completed_at": null,
+          "status": "pending"
         },
         {
           "id": "sde-122",
-          "type": "new"
+          "type": "new",
+          "assigned_at": "2026-09-21T12:06:41.488846-07:00",
+          "completed_at": null,
+          "status": "pending"
         },
         {
           "id": "sde-123",
-          "type": "new"
+          "type": "new",
+          "assigned_at": "2026-09-21T12:06:41.488846-07:00",
+          "completed_at": null,
+          "status": "pending"
         },
         {
           "id": "sde-124",
-          "type": "new"
+          "type": "new",
+          "assigned_at": "2026-09-21T12:06:41.488846-07:00",
+          "completed_at": null,
+          "status": "pending"
         }
       ],
       "daily_email_sent": true,

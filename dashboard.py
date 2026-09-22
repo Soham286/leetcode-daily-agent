@@ -1,4 +1,4 @@
-﻿import html
+import html
 import json
 import math
 import sys
@@ -175,7 +175,14 @@ def build_history(assignments, catalog, states):
 
             details = get_question_details(question_id, catalog)
             state = states.get(str(question_id), {})
-            status = state.get("status", "not_started")
+            status = (
+                item.get(
+                    "status",
+                    state.get("status", "not_started")
+                )
+                if isinstance(item, dict)
+                else state.get("status", "not_started")
+            )
 
             rows.append(
                 {
@@ -564,7 +571,14 @@ else:
 
         details = get_question_details(question_id, catalog)
         state = states.get(question_id, {})
-        status = state.get("status", "assigned")
+        status = (
+            item.get(
+                "status",
+                state.get("status", "assigned")
+            )
+            if isinstance(item, dict)
+            else state.get("status", "assigned")
+        )
 
         with columns[index % len(columns)]:
             st.markdown(
@@ -849,4 +863,3 @@ st.caption(
     f"Last refreshed: {now.strftime('%B %d, %Y at %I:%M %p %Z')} · "
     f"Contests recorded: {len(contests)} · Reflections recorded: {len(reflections)}"
 )
-

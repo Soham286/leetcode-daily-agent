@@ -1,4 +1,4 @@
-﻿import json
+import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -129,7 +129,10 @@ def get_today_questions(tracker, question_bank):
             assigned_item["id"]
         )
 
-        combined["status"] = record["status"]
+        combined["status"] = assigned_item.get(
+            "status",
+            record["status"]
+        )
         results.append(combined)
 
     return results
@@ -168,7 +171,10 @@ def record_daily_assignment(tracker, selected_questions):
 
         assigned_items.append({
             "id": question_id,
-            "type": assignment_type
+            "type": assignment_type,
+            "status": "pending",
+            "assigned_at": timestamp,
+            "completed_at": None
         })
 
     assignment = {
@@ -315,9 +321,12 @@ def sync_leetcode_progress(tracker, question_bank):
 
         if (
             slug not in accepted
-            or submission_time > accepted[slug]
+            or submission_time > accepted[slug]["timestamp"]
         ):
-            accepted[slug] = submission_time
+            accepted[slug] = {
+                "timestamp": submission_time,
+                "submission_id": submission.get("id")
+            }
 
     questions_by_slug = {
         question["leetcode_slug"]: question
@@ -327,49 +336,110 @@ def sync_leetcode_progress(tracker, question_bank):
 
     changed = False
 
-    for slug, accepted_timestamp in accepted.items():
+    def parse_assignment_time(value):
+        if not value:
+            return None
+
+        parsed = datetime.fromisoformat(
+            str(value).replace("Z", "+00:00")
+        )
+
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(
+                tzinfo=LOCAL_TIMEZONE
+            )
+
+        return parsed.astimezone(LOCAL_TIMEZONE)
+
+    for slug, submission_data in accepted.items():
         question = questions_by_slug.get(slug)
 
         if not question:
             continue
 
-        record = get_question_record(
-            tracker,
-            question["id"]
-        )
-
-        if record["status"] in {
-            "solved",
-            "solved_independently",
-            "reviewed",
-            "mastered"
-        }:
-            continue
+        question_id = question["id"]
 
         accepted_at = datetime.fromtimestamp(
-            accepted_timestamp,
+            submission_data["timestamp"],
             tz=timezone.utc
         ).astimezone(LOCAL_TIMEZONE)
+
+        for assignment in tracker.get("assignments", []):
+            for assigned_item in assignment.get(
+                "questions",
+                []
+            ):
+                if assigned_item.get("id") != question_id:
+                    continue
+
+                assigned_at = parse_assignment_time(
+                    assigned_item.get("assigned_at")
+                    or assignment.get("created_at")
+                )
+
+                if not assigned_at:
+                    continue
+
+                if accepted_at < assigned_at:
+                    continue
+
+                assignment_status = (
+                    "reviewed"
+                    if assigned_item.get("type") == "review"
+                    else "solved"
+                )
+
+                previous_completed_at = assigned_item.get(
+                    "completed_at"
+                )
+
+                if (
+                    assigned_item.get("status")
+                    != assignment_status
+                    or previous_completed_at
+                    != accepted_at.isoformat()
+                ):
+                    assigned_item["status"] = (
+                        assignment_status
+                    )
+                    assigned_item["completed_at"] = (
+                        accepted_at.isoformat()
+                    )
+                    assigned_item["submission_id"] = (
+                        submission_data.get("submission_id")
+                    )
+                    changed = True
+
+        record = get_question_record(
+            tracker,
+            question_id
+        )
 
         last_assigned = record.get("last_assigned_at")
 
         if last_assigned:
-            assigned_at = datetime.fromisoformat(
+            assigned_at = parse_assignment_time(
                 last_assigned
             )
 
-            if accepted_at < assigned_at:
+            if assigned_at and accepted_at < assigned_at:
                 continue
 
-        record["status"] = "solved"
-        record["solved_at"] = accepted_at.isoformat()
-        record["review_interval_index"] = 0
-        record["next_review_on"] = (
-            accepted_at.date()
-            + timedelta(days=REVIEW_INTERVALS[0])
-        ).isoformat()
-
-        changed = True
+        if record["status"] not in {
+            "solved",
+            "solved_independently",
+            "solved_with_help",
+            "reviewed",
+            "mastered"
+        }:
+            record["status"] = "solved"
+            record["solved_at"] = accepted_at.isoformat()
+            record["review_interval_index"] = 0
+            record["next_review_on"] = (
+                accepted_at.date()
+                + timedelta(days=REVIEW_INTERVALS[0])
+            ).isoformat()
+            changed = True
 
     if changed:
         save_tracker(tracker)

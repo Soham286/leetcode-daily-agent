@@ -1,4 +1,4 @@
-﻿import json
+import json
 import os
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -195,6 +195,39 @@ def main():
 
     state["hint_used"] = hint_used
     state["solution_viewed"] = solution_viewed
+
+    completed_statuses = {
+        "solved",
+        "solved_independently",
+        "solved_with_help",
+        "reviewed",
+        "mastered",
+    }
+
+    for assignment in reversed(
+        tracker.get("assignments", [])
+    ):
+        matched_assignment = False
+
+        for assigned_item in assignment.get(
+            "questions",
+            []
+        ):
+            if assigned_item.get("id") != question_id:
+                continue
+
+            assigned_item["status"] = status
+
+            if status in completed_statuses:
+                assigned_item["completed_at"] = (
+                    now.isoformat()
+                )
+
+            matched_assignment = True
+            break
+
+        if matched_assignment:
+            break
 
     tracker.setdefault("reflections", []).append(
         {
