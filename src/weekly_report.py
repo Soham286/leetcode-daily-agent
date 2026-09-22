@@ -118,7 +118,7 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 
-AGENT_START_DATE = date(2026, 9, 21)
+AGENT_START_DATE = date(2026, 9, 22)
 
 
 def main():
