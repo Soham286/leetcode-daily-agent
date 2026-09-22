@@ -3679,9 +3679,10 @@
       ],
       "daily_email_sent": true,
       "warning_one_sent": true,
-      "warning_two_sent": false,
+      "warning_two_sent": true,
       "daily_email_sent_at": "2026-09-21T12:50:51.855225-07:00",
-      "warning_one_sent_at": "2026-09-22"
+      "warning_one_sent_at": "2026-09-22",
+      "warning_two_sent_at": "2026-09-22"
     }
   ],
   "contests": [],
