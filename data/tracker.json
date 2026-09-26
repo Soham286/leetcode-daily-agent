@@ -2622,9 +2622,10 @@
         }
       ],
       "daily_email_sent": true,
-      "warning_one_sent": false,
+      "warning_one_sent": true,
       "warning_two_sent": false,
-      "daily_email_sent_at": "2026-09-25T12:12:45.729421-07:00"
+      "daily_email_sent_at": "2026-09-25T12:12:45.729421-07:00",
+      "warning_one_sent_at": "2026-09-26"
     }
   ],
   "contests": [],
