@@ -2896,9 +2896,10 @@
         }
       ],
       "daily_email_sent": true,
-      "warning_one_sent": false,
+      "warning_one_sent": true,
       "warning_two_sent": false,
-      "daily_email_sent_at": "2026-10-01T13:18:28.663544-07:00"
+      "daily_email_sent_at": "2026-10-01T13:18:28.663544-07:00",
+      "warning_one_sent_at": "2026-10-02"
     }
   ],
   "contests": [],
