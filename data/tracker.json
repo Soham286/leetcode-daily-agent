@@ -3440,9 +3440,10 @@
         }
       ],
       "daily_email_sent": true,
-      "warning_one_sent": false,
+      "warning_one_sent": true,
       "warning_two_sent": false,
-      "daily_email_sent_at": "2026-10-13T13:35:57.222542-07:00"
+      "daily_email_sent_at": "2026-10-13T13:35:57.222542-07:00",
+      "warning_one_sent_at": "2026-10-14"
     }
   ],
   "contests": [],
