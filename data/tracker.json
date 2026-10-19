@@ -2268,8 +2268,8 @@
       "review_interval_index": 0
     },
     "sde-182": {
-      "status": "not_started",
-      "assigned_count": 0,
+      "status": "assigned",
+      "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
       "hint_used": false,
@@ -2278,8 +2278,8 @@
       "time_minutes": null,
       "mistake": "",
       "pattern": "",
-      "first_assigned_at": null,
-      "last_assigned_at": null,
+      "first_assigned_at": "2026-10-19T13:31:10.262664-07:00",
+      "last_assigned_at": "2026-10-19T13:31:10.262664-07:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -2287,8 +2287,8 @@
       "review_interval_index": 0
     },
     "sde-183": {
-      "status": "not_started",
-      "assigned_count": 0,
+      "status": "assigned",
+      "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
       "hint_used": false,
@@ -2297,8 +2297,8 @@
       "time_minutes": null,
       "mistake": "",
       "pattern": "",
-      "first_assigned_at": null,
-      "last_assigned_at": null,
+      "first_assigned_at": "2026-10-19T13:31:10.262664-07:00",
+      "last_assigned_at": "2026-10-19T13:31:10.262664-07:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -2306,8 +2306,8 @@
       "review_interval_index": 0
     },
     "sde-184": {
-      "status": "not_started",
-      "assigned_count": 0,
+      "status": "assigned",
+      "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
       "hint_used": false,
@@ -2316,8 +2316,8 @@
       "time_minutes": null,
       "mistake": "",
       "pattern": "",
-      "first_assigned_at": null,
-      "last_assigned_at": null,
+      "first_assigned_at": "2026-10-19T13:31:10.262664-07:00",
+      "last_assigned_at": "2026-10-19T13:31:10.262664-07:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -2325,8 +2325,8 @@
       "review_interval_index": 0
     },
     "sde-185": {
-      "status": "not_started",
-      "assigned_count": 0,
+      "status": "assigned",
+      "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
       "hint_used": false,
@@ -2335,8 +2335,8 @@
       "time_minutes": null,
       "mistake": "",
       "pattern": "",
-      "first_assigned_at": null,
-      "last_assigned_at": null,
+      "first_assigned_at": "2026-10-19T13:31:10.262664-07:00",
+      "last_assigned_at": "2026-10-19T13:31:10.262664-07:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -2344,8 +2344,8 @@
       "review_interval_index": 0
     },
     "sde-186": {
-      "status": "not_started",
-      "assigned_count": 0,
+      "status": "assigned",
+      "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
       "hint_used": false,
@@ -2354,8 +2354,8 @@
       "time_minutes": null,
       "mistake": "",
       "pattern": "",
-      "first_assigned_at": null,
-      "last_assigned_at": null,
+      "first_assigned_at": "2026-10-19T13:31:10.262664-07:00",
+      "last_assigned_at": "2026-10-19T13:31:10.262664-07:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -3674,6 +3674,51 @@
       "warning_two_sent": false,
       "daily_email_sent_at": "2026-10-18T10:59:54.950565-07:00",
       "warning_one_sent_at": "2026-10-19"
+    },
+    {
+      "date": "2026-10-19",
+      "created_at": "2026-10-19T13:31:10.262664-07:00",
+      "questions": [
+        {
+          "id": "sde-182",
+          "type": "new",
+          "status": "pending",
+          "assigned_at": "2026-10-19T13:31:10.262664-07:00",
+          "completed_at": null
+        },
+        {
+          "id": "sde-183",
+          "type": "new",
+          "status": "pending",
+          "assigned_at": "2026-10-19T13:31:10.262664-07:00",
+          "completed_at": null
+        },
+        {
+          "id": "sde-184",
+          "type": "new",
+          "status": "pending",
+          "assigned_at": "2026-10-19T13:31:10.262664-07:00",
+          "completed_at": null
+        },
+        {
+          "id": "sde-185",
+          "type": "new",
+          "status": "pending",
+          "assigned_at": "2026-10-19T13:31:10.262664-07:00",
+          "completed_at": null
+        },
+        {
+          "id": "sde-186",
+          "type": "new",
+          "status": "pending",
+          "assigned_at": "2026-10-19T13:31:10.262664-07:00",
+          "completed_at": null
+        }
+      ],
+      "daily_email_sent": true,
+      "warning_one_sent": false,
+      "warning_two_sent": false,
+      "daily_email_sent_at": "2026-10-19T13:31:12.350442-07:00"
     }
   ],
   "contests": [],
