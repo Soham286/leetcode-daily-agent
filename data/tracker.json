@@ -3810,9 +3810,10 @@
         }
       ],
       "daily_email_sent": true,
-      "warning_one_sent": false,
+      "warning_one_sent": true,
       "warning_two_sent": false,
-      "daily_email_sent_at": "2026-10-24T11:01:55.953439-07:00"
+      "daily_email_sent_at": "2026-10-24T11:01:55.953439-07:00",
+      "warning_one_sent_at": "2026-10-25"
     }
   ],
   "contests": [],
