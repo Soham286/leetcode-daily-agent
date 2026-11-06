@@ -3972,6 +3972,15 @@
       "warning_one_sent": false,
       "warning_two_sent": false,
       "daily_email_sent_at": "2026-11-05T13:55:02.593900-08:00"
+    },
+    {
+      "date": "2026-11-06",
+      "created_at": "2026-11-06T13:26:03.971790-08:00",
+      "questions": [],
+      "daily_email_sent": true,
+      "warning_one_sent": false,
+      "warning_two_sent": false,
+      "daily_email_sent_at": "2026-11-06T13:26:05.715858-08:00"
     }
   ],
   "contests": [],
