@@ -4038,6 +4038,15 @@
       "warning_one_sent": false,
       "warning_two_sent": false,
       "daily_email_sent_at": "2026-11-09T16:06:45.868514-08:00"
+    },
+    {
+      "date": "2026-11-10",
+      "created_at": "2026-11-10T13:45:36.304073-08:00",
+      "questions": [],
+      "daily_email_sent": true,
+      "warning_one_sent": false,
+      "warning_two_sent": false,
+      "daily_email_sent_at": "2026-11-10T13:45:37.280560-08:00"
     }
   ],
   "contests": [],
