@@ -599,7 +599,7 @@
       "status": "assigned",
       "assigned_count": 1,
       "attempt_count": 0,
-      "review_count": 0,
+      "review_count": 1,
       "hint_used": false,
       "solution_viewed": false,
       "confidence": null,
@@ -607,7 +607,7 @@
       "mistake": "",
       "pattern": "",
       "first_assigned_at": "2026-09-29T12:56:02.989451-07:00",
-      "last_assigned_at": "2026-09-29T12:56:02.989451-07:00",
+      "last_assigned_at": "2026-11-15T12:58:27.992448-08:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -1226,7 +1226,7 @@
       "status": "assigned",
       "assigned_count": 1,
       "attempt_count": 0,
-      "review_count": 0,
+      "review_count": 1,
       "hint_used": false,
       "solution_viewed": false,
       "confidence": null,
@@ -1234,7 +1234,7 @@
       "mistake": "",
       "pattern": "",
       "first_assigned_at": "2026-10-06T13:08:35.860377-07:00",
-      "last_assigned_at": "2026-10-06T13:08:35.860377-07:00",
+      "last_assigned_at": "2026-11-15T12:58:27.992448-08:00",
       "started_at": null,
       "solved_at": null,
       "last_reviewed_at": null,
@@ -4098,6 +4098,30 @@
       "warning_one_sent": false,
       "warning_two_sent": false,
       "daily_email_sent_at": "2026-11-14T12:35:10.020649-08:00"
+    },
+    {
+      "date": "2026-11-15",
+      "created_at": "2026-11-15T12:58:27.992448-08:00",
+      "questions": [
+        {
+          "id": "sde-148",
+          "type": "review",
+          "status": "pending",
+          "assigned_at": "2026-11-15T12:58:27.992448-08:00",
+          "completed_at": null
+        },
+        {
+          "id": "sde-100",
+          "type": "review",
+          "status": "pending",
+          "assigned_at": "2026-11-15T12:58:27.992448-08:00",
+          "completed_at": null
+        }
+      ],
+      "daily_email_sent": true,
+      "warning_one_sent": false,
+      "warning_two_sent": false,
+      "daily_email_sent_at": "2026-11-15T12:58:31.072206-08:00"
     }
   ],
   "contests": [],
