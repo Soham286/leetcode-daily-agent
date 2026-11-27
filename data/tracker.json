@@ -216,7 +216,7 @@
       "review_interval_index": 0
     },
     "sde-120": {
-      "status": "assigned",
+      "status": "solved",
       "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 1,
@@ -229,9 +229,9 @@
       "first_assigned_at": "2026-09-24T12:00:07.669078-07:00",
       "last_assigned_at": "2026-10-04T11:36:05.159638-07:00",
       "started_at": null,
-      "solved_at": null,
+      "solved_at": "2026-11-26T17:02:54-08:00",
       "last_reviewed_at": null,
-      "next_review_on": null,
+      "next_review_on": "2026-11-27",
       "review_interval_index": 0
     },
     "sde-121": {
@@ -330,7 +330,7 @@
       "review_interval_index": 0
     },
     "sde-126": {
-      "status": "assigned",
+      "status": "solved",
       "assigned_count": 1,
       "attempt_count": 0,
       "review_count": 0,
@@ -343,9 +343,9 @@
       "first_assigned_at": "2026-09-25T12:12:42.209386-07:00",
       "last_assigned_at": "2026-09-25T12:12:42.209386-07:00",
       "started_at": null,
-      "solved_at": null,
+      "solved_at": "2026-11-26T19:21:18-08:00",
       "last_reviewed_at": null,
-      "next_review_on": null,
+      "next_review_on": "2026-11-27",
       "review_interval_index": 0
     },
     "sde-127": {
@@ -2551,9 +2551,10 @@
         {
           "id": "sde-120",
           "type": "new",
-          "status": "pending",
+          "status": "solved",
           "assigned_at": "2026-09-24T12:00:07.669078-07:00",
-          "completed_at": null
+          "completed_at": "2026-11-26T17:02:54-08:00",
+          "submission_id": "2204241241"
         },
         {
           "id": "sde-121",
@@ -2607,9 +2608,10 @@
         {
           "id": "sde-126",
           "type": "new",
-          "status": "pending",
+          "status": "solved",
           "assigned_at": "2026-09-25T12:12:42.209386-07:00",
-          "completed_at": null
+          "completed_at": "2026-11-26T19:21:18-08:00",
+          "submission_id": "2204277438"
         },
         {
           "id": "sde-127",
@@ -3028,9 +3030,10 @@
         {
           "id": "sde-120",
           "type": "review",
-          "status": "pending",
+          "status": "reviewed",
           "assigned_at": "2026-10-04T11:36:05.159638-07:00",
-          "completed_at": null
+          "completed_at": "2026-11-26T17:02:54-08:00",
+          "submission_id": "2204241241"
         },
         {
           "id": "sde-007",
